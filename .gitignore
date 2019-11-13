@@ -35,6 +35,8 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+.idea/
+.history/
 
 # TypeScript v1 declaration files
 typings/
@@ -59,3 +61,14 @@ typings/
 
 # next.js build output
 .next
+.idea/workspace.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/smmagnat.iml
+.idea/vcs.xml
+.idea/webResources.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/smmagnat.iml
+.idea/vcs.xml
+.idea/webResources.xml
