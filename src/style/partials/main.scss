@@ -1,10 +1,16 @@
-$font1: "Gilroy", sans-serif;
+$font1: "SF Pro Display", sans-serif;
+
+$green: #3DA163;
+$gray: #9DAFC3;
+$blue: #0C3362;
+$white: #ffffff;
 
 a{
 	text-decoration: none;
 }
 
-html,body{
+*:focus{
+	outline: none;
 }
 
 body{
@@ -16,19 +22,7 @@ body{
 }
 
 .container{
-	width: 1170px;
 	margin: 0 auto;
 	box-sizing: border-box;
 }
 
-#jGrowl{
-  z-index: 999999;
-}
-
-*:focus{
-	outline: none;
-}
-
-.hide{
-	display: none;
-}
