@@ -15,6 +15,105 @@
 
 <div class="wrapper profile-page">
     //= template/sidebar.html
+
+    <div class="main">
+        <div class="form-col">
+            <div class="info-block">
+                <div class="img"></div>
+                <div class="text">Обращаем Ваше внимание, что корректные данные увеличивают шанс на получение кредита. Мы строго следим за сохранностью информации о Вас. Подробнее о защите данных - в разделе «политика конфиденциальности»</div>
+            </div>
+            <form action="/" class="form-style">
+                <div class="form-section" id="form-section-1">
+                    <div class="section-title">Личные данные</div>
+                    <div class="input-row">
+                        <div class="input-block"><input type="text" name="" required><span>Фамилия</span><div class="hit" title="Подсказка">?</div></div>
+                        <div class="input-block"><input type="text" name="" required><span>Имя</span><div class="hit" title="Подсказка">?</div></div>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-block"><input type="text" name="" required><span>Отчество</span><div class="hit" title="Подсказка">?</div></div>
+                        <div class="input-block"><input class="datepicker" type="text" name="" required><span>Дата рождения</span></div>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-block"><input type="text" name="" required><span>Место рождения</span><div class="hit" title="Подсказка">?</div></div>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-block"><input type="text" name="" required><span>Идентификационный номер</span><div class="hit" title="Подсказка">?</div></div>
+                    </div>
+                </div>
+
+                <div class="form-section" id="form-section-2">
+                    <div class="section-title">паспортные данные</div>
+                    <div class="radio-toggle">
+                        <input id="type1"  name="type" type="radio" />
+                        <input id="type2" name="type" type="radio" />
+                        <label for="type1" class="toggle-label">Паспорт старого образца</label>
+                        <div class="toggle-block">
+                            <div class="toggle-pill"></div>
+                        </div>
+                        <label for="type2" class="toggle-label">Паспорт ID карта</label>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-block"><input type="text" name="" required><span>Серия</span></div>
+                        <div class="input-block"><input type="text" name="" required><span>Номер</span><div class="hit" title="Подсказка">?</div></div>
+                    </div>
+
+                    <div class="passport-photo-row">
+                        <div class="input-row-title"></div>
+                        <label><input type="file"><span class="pass-img"></span></label>
+                        <div>Фото с паспортом или ID-картой значительно увеличит вероятность получения кредита</div>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-block"><input type="text" name="" required><span>Кем выдан</span><div class="hit" title="Подсказка">?</div></div>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-block"><input class="datepicker" type="text" name="" required><span>Дата выдачи</span></div>
+                    </div>
+                </div>
+
+                <div class="form-section" id="form-section-3">
+                    <div class="section-title">Дополнительная информация</div>
+                    <div class="input-row">
+                        <div class="input-block"><input type="text" name="" required><span>Семейное положение</span></div>
+                        <div class="input-block"><input type="text" name="" required><span>Кол-во детей до 18 лет</span></div>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-block"><input type="text" name="" required><span>Образование</span></div>
+                        <div class="input-block"><input type="text" name="" required><span>Специальность</span></div>
+                    </div>
+                </div>
+
+                <div class="form-section" id="form-section-4">
+                    <div class="section-title">Адрес регистрации</div>
+                    <div class="input-row">
+                        <div class="input-block"><input type="text" name="" required><span>Область</span></div>
+                        <div class="input-block"><input type="text" name="" required><span>Город</span></div>
+                        <div class="input-block"><input type="text" name="" required><span>Улица</span></div>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-block"><input type="text" name="" required><span>Дом</span></div>
+                        <div class="input-block"><input type="text" name="" required><span>Корпус</span></div>
+                        <div class="input-block"><input type="text" name="" required><span>Квартира</span></div>
+                    </div>
+                    <div class="checkbox-block"><label class="checkbox"><input type="checkbox" name=""><span>Адрес регистрации совпадает с адресом прописки</span></label></div>
+                </div>
+
+                <div class="form-section" id="form-section-5">
+                    <div class="section-title">Общая информация</div>
+                    <div class="input-row">
+                        <div class="input-block input-block_with-label"><div class="label"></div><input type="text" name="" required><span>Бизнес вложения</span><div class="hit" title="Подсказка">?</div></div>
+                    </div>
+                </div>
+
+                <div class="form-section" id="form-section-6">
+                    <div class="section-title">Контактная информация</div>
+                </div>
+
+            </form>
+        </div>
+        <div class="profile-info-col"></div>
+    </div>
 </div>
 
 

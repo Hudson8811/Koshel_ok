@@ -13,10 +13,12 @@ a{
 	outline: none;
 }
 
+
+
 body{
 	color: #3b3b3b;
 	font-family: $font1;
-	font-size: 16px;
+	font-size: 15px;
 	margin: 0;
 	background: #ffffff;
 }
@@ -26,3 +28,143 @@ body{
 	box-sizing: border-box;
 }
 
+
+
+.info-block{
+	background: #FFFCE1;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 16px 16px 24px;
+	display: flex;
+	align-items: flex-start;
+	.img{
+		width: 26px;
+		height: 27px;
+		display: block;
+		margin-right: 14px;
+		background: url("../img/info.svg") center center no-repeat;
+		background-size: contain;
+		flex-shrink: 0;
+	}
+	.text{
+		font-size: 13px;
+		line-height: 135%;
+		color: #000000;
+	}
+}
+
+.section-title{
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 135%;
+	text-transform: uppercase;
+	color: $green;
+	margin-bottom: 40px;
+}
+
+.input-block{
+	width: 100%;
+	max-width: 100%;
+	position: relative;
+	span{
+		color: #94959A;
+		font-size: 15px;
+		text-align: left;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		pointer-events: none;
+		left: 0;
+		top: 0;
+		transition: 0.2s ease all;
+		box-sizing: border-box;
+		line-height: 0.8;
+		padding-left: 16px;
+		padding-top: 18px;
+	}
+	input{
+		background: #ffffff;
+		font-family: $font1;
+		font-weight: 400;
+		width: 100%;
+		border: 1px solid #C6C8D4;
+		box-sizing: border-box;
+		border-radius: 1px;
+		font-size: 15px;
+		line-height: 18px;
+		color: #000000;
+		padding-left: 15px;
+		padding-right: 36px;
+		padding-top: 20px;
+		height: 48px;
+		&.datepicker{
+			background-image: url("../img/date.svg");
+			background-repeat: no-repeat;
+			background-position: right 16px center;
+			background-size: 21px auto;
+		}
+		&:focus{
+			outline: none;
+			border: 1px solid #8F929F;
+		}
+		&:focus,
+		&:not(:focus):valid{
+			~span{
+				padding-top: 9px !important;
+				font-size: 11px;
+			}
+		}
+	}
+	.hit{
+		width: 20px;
+		height: 20px;
+		background: #FFFCE1;
+		position: absolute;
+		right: 16px;
+		top: 50%;
+		margin-top: -10px;
+		text-align: center;
+		color: $blue;
+		font-size: 13px;
+		line-height: 20px;
+		cursor: default;
+		border-radius: 100%;
+	}
+}
+.input-row{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -30px;
+	margin-top: -24px;
+	+.input-row{
+		margin-top: 0;
+	}
+	.input-block{
+		flex: 1 0 150px;
+		margin-left: 30px;
+		margin-top: 24px;
+	}
+}
+
+
+.form-style{
+	.form-section{
+		+.form-section{
+			margin-top: 64px;
+		}
+	}
+}
+
+
+.main{
+	padding-left: 269px;
+	display: flex;
+}
+
+.form-col{
+	width: 540px;
+	max-width: 100%;
+	form{
+		margin-top: 36px;
+	}
+}
