@@ -1,0 +1,343 @@
+.get-credit-page {
+    padding-top: 64px;
+}
+
+.credit-registration {
+    width: 635px;
+    margin-right: 125px;
+}
+
+.page-block-title {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 135%;
+
+    text-transform: uppercase;
+    color: #3DA163;
+}
+
+
+.credit-registration-sliders {
+    margin-top: 33px;
+}
+
+.gc-slider-range {
+    &__name {
+        font-size: 13px;
+        line-height: 135%;
+        color: #94959A;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 48px;
+    }
+
+
+}
+
+.gc-slider-range-info {
+    margin-top: 3px;
+    display: flex;
+    align-items: center;
+
+    &__value {
+        flex-grow: 1;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 135%;
+        color: #000000;
+    }
+
+    &__expiration-date {
+        margin-left: 32px;
+        display: flex;
+        align-items: flex-end;
+        flex-grow: 99999;
+        font-size: 13px;
+        line-height: 1;
+        color: #000000;
+
+        &::before {
+            content: '';
+            margin-right: 8px;
+            display: block;
+            width: 16px;
+            height: 16px;
+            background: url(../img/calendar.svg) no-repeat center center;
+
+        }
+    }
+
+    &__max {
+        font-size: 13px;
+        line-height: 135%;
+        color: #000000;
+
+        span {
+            font-weight: bold;
+        }
+    }
+
+    &__hint {
+        margin-left: 8px;
+        width: 20px;
+        height: 20px;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #FFFCE1;
+        font-size: 13px;
+        line-height: 16px;
+        color: #0C3362;
+        cursor: pointer;
+    }
+}
+
+.gc-slider__slider-range {
+    margin-top: 23px;
+
+    &.ui-widget.ui-widget-content {
+        background: #E3E4EB;
+        border-radius: 100px;
+        height: 7px;
+        border: 0;
+    }
+
+    &.ui-slider .ui-slider-range {
+        background: linear-gradient(90deg, #3DA163 80%, #208A48 100%);
+        border-radius: 7px;
+    }
+
+    .ui-state-default,
+    .ui-widget-content .ui-state-default {
+        top: -7px;
+        border: 0;
+        width: 35px;
+        height: 21px;
+        background: #3DA163;
+        border: 2px solid #4CB373;
+        box-sizing: border-box;
+        border-radius: 15px;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 13px;
+            height: 9px;
+            background: url(../img/slider-strips.svg) no-repeat center center;
+            @include center-absolute();
+            z-index: 1;
+        }
+    }
+}
+
+.credit-registration-apply {
+    margin-top: 71px;
+    padding: 24px 63px 32px;
+    background: #F1F2F7;
+}
+
+.cra-results {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #E3E4EB;
+    margin-top: 1px;
+    padding-bottom: 17px;
+}
+
+.cra-results-item {
+    &__name {
+        font-size: 13px;
+        line-height: 135%;
+
+        color: #000000;
+    }
+
+    &__val {
+        margin-top: 1px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 135%;
+        color: #3DA163;
+    }
+}
+
+.cra-bottom {
+    margin-top: 49px;
+    display: flex;
+    margin-top: 24px;
+
+    &__left {
+        margin-right: 48px;
+    }
+
+    &__right {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        a {
+            margin-top: 5px;
+            display: block;
+            font-size: 13px;
+            line-height: 150%;
+            color: #0C3362;
+
+            &:hover {}
+
+            &:active {}
+
+            &:focus {}
+        }
+    }
+
+
+
+
+}
+
+.cra-apply-btn {
+    width: 163px;
+    height: 51px;
+
+    background: #3DA163;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+
+}
+
+
+
+
+
+
+
+.my-achievements {
+    width: 350px;
+}
+
+
+
+.page-block-title {}
+
+.my-achievements-slider-container {
+    margin-top: 31px;
+
+    background: #F1F2F7;
+    padding: 48px 28px 48px;
+
+}
+
+.my-achievements-slider {
+    position: relative;
+
+    &__slide {
+        display: block;
+
+        p {}
+
+        &:hover {}
+
+        &:active {}
+
+        &:focus {}
+    }
+}
+
+.my-achievements-slider-arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 134.5px;
+    z-index: 1;
+
+    &.slick-disabled {
+        display: none !important;
+    }
+}
+
+.mas-arrow-prev {
+    left: 0;
+}
+
+.mas-arrow-next {
+    right: 0;
+}
+
+.achivement {
+
+
+    &__name {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 135%;
+
+        text-align: center;
+
+        margin-top: 12px;
+        color: #3DA163;
+    }
+}
+
+.achivement-indicator-CW {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+}
+
+.achivement-indicator-container {}
+
+.achivement-indicator__picture {
+    @include center-absolute();
+    max-width: 35%;
+    width: 100%;
+}
+
+.achicement-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+
+    &__main {
+        display: block;
+        margin: 0 auto;
+        margin-top: 16px;
+        text-align: left;
+
+        font-size: 15px;
+        line-height: 135%;
+        color: #000000;
+
+        span {
+            font-weight: bold;
+        }
+
+        p {
+            margin-bottom: 5px;}
+    }
+
+
+
+    &__small-grey {
+        width: 199px;
+        max-width: 100%;
+        text-align: center;
+        font-size: 13px;
+        line-height: 135%;
+        color: #94959A;
+        margin-top: 15px;
+    }
+}
