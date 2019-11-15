@@ -74,7 +74,6 @@ $(document).ready(function () {
 
         //изменить радиус radInAchivements[0].option('radius',90);
         //изменить значение radInAchivements[0].animate(60);
-
     }
 
 
@@ -119,11 +118,12 @@ $(document).ready(function () {
         );
     }
     ready_gc = true;
-    adaptGC();
+    if ($('.achivement-indicator-container').length > 0) {
+        adaptGC();
+        $(window).resize(function () { adaptGC(); });
+    }
 });
 
-
-$(window).resize(function () { adaptGC(); });
 
 
 
@@ -136,7 +136,7 @@ adaptGC = function () {
                 value.option('radius', 84);
             });
         }
-        if (window.innerWidth <= 1440 && window.innerWidth > 639  && radInAchivements[0].indOption.radius != 52) {
+        if (window.innerWidth <= 1440 && window.innerWidth > 639 && radInAchivements[0].indOption.radius != 52) {
             /*console.log(radInAchivements[0].indOption.barWidth);
             console.log(radInAchivements[0].indOption.radius);*/
 

@@ -10672,7 +10672,7 @@ this._delay(function(){n===this.counter&&this.refreshPositions(!s)})},_clear:fun
     //! moment.js locale configuration
 
     hooks.defineLocale('ml', {
-        months : 'ജനുവരി_ഫെബ്രുവരി_മാർച്ച്_ഏപ്രിൽ_മേയ്_ജൂൺ_ജൂലൈ_ഓഗസ്റ്റ്_സെപ്റ്റംബർ_ഒക്ടോബർ_നവംബർ_ഡിസംബർ'.split('_'),
+        months : 'ജനുവരി_ഫെബ്രുവരി_മാർച്ച്_ഏപ്രിൽ_മേയ്_ജൂൺ_ജൂലൈ_ഓഗസ്റ്റ്_സെപ്റ്റംബർ_ഒക്ടോബർ_നവംബർ_ഡ���സംബർ'.split('_'),
         monthsShort : 'ജനു._ഫെബ്രു._മാർ._ഏപ്രി._മേയ്_ജൂൺ_ജൂലൈ._ഓഗ._സെപ്റ്റ._ഒക്ടോ._നവം._ഡിസം.'.split('_'),
         monthsParseExact : true,
         weekdays : 'ഞായറാഴ്ച_തിങ്കളാഴ്ച_ചൊവ്വാഴ്ച_ബുധനാഴ്ച_വ്യാഴാഴ്ച_വെള്ളിയാഴ്ച_ശനിയാഴ്ച'.split('_'),
@@ -11178,7 +11178,7 @@ this._delay(function(){n===this.counter&&this.refreshPositions(!s)})},_clear:fun
         '7': '၇',
         '8': '၈',
         '9': '၉',
-        '0': '၀'
+        '0': '���'
     }, numberMap$b = {
         '၁': '1',
         '၂': '2',
@@ -12052,7 +12052,7 @@ this._delay(function(){n===this.counter&&this.refreshPositions(!s)})},_clear:fun
         monthsShortRegex: /^(январ[ья]|янв\.?|феврал[ья]|февр?\.?|марта?|мар\.?|апрел[ья]|апр\.?|ма[йя]|июн[ья]|июн\.?|июл[ья]|июл\.?|августа?|авг\.?|сентябр[ья]|сент?\.?|октябр[ья]|окт\.?|ноябр[ья]|нояб?\.?|декабр[ья]|дек\.?)/i,
 
         // полные названия с падежами
-        monthsStrictRegex: /^(январ[яь]|феврал[яь]|марта?|апрел[яь]|��а[яй]|июн[яь]|июл[яь]|августа?|сентябр[яь]|октябр[яь]|ноябр[яь]|декабр[яь])/i,
+        monthsStrictRegex: /^(январ[яь]|феврал[яь]|марта?|апрел[яь]|ма[яй]|июн[яь]|июл[яь]|августа?|сентябр[яь]|октябр[яь]|ноябр[яь]|декабр[яь])/i,
 
         // Выражение, которое соотвествует только сокращённым формам
         monthsShortStrictRegex: /^(янв\.|февр?\.|мар[т.]|апр\.|ма[яй]|июн[ья.]|июл[ья.]|авг\.|сент?\.|окт\.|нояб?\.|дек\.)/i,
@@ -14825,6 +14825,9 @@ $(document).ready(function() {
 });
 
 
+$(document).ready(function () {
+
+});
 
 moment.locale('ru');
 
@@ -14901,7 +14904,6 @@ $(document).ready(function () {
 
         //изменить радиус radInAchivements[0].option('radius',90);
         //изменить значение radInAchivements[0].animate(60);
-
     }
 
 
@@ -14946,11 +14948,12 @@ $(document).ready(function () {
         );
     }
     ready_gc = true;
-    adaptGC();
+    if ($('.achivement-indicator-container').length > 0) {
+        adaptGC();
+        $(window).resize(function () { adaptGC(); });
+    }
 });
 
-
-$(window).resize(function () { adaptGC(); });
 
 
 
@@ -14963,7 +14966,7 @@ adaptGC = function () {
                 value.option('radius', 84);
             });
         }
-        if (window.innerWidth <= 1440 && window.innerWidth > 639  && radInAchivements[0].indOption.radius != 52) {
+        if (window.innerWidth <= 1440 && window.innerWidth > 639 && radInAchivements[0].indOption.radius != 52) {
             /*console.log(radInAchivements[0].indOption.barWidth);
             console.log(radInAchivements[0].indOption.radius);*/
 

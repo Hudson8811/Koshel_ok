@@ -193,6 +193,11 @@ img {
 .container {
 	width: 1110px;
 	margin: 0 auto;
+	box-sizing: content-box;
+	padding-right: 269px;
+	&.flex-row{
+align-items: flex-start;
+	}
 }
 
 .hovco {
@@ -221,6 +226,7 @@ img {
 		padding: 0 39px;
 	}
 }
+
 @media screen and (max-width: 767px) {
 	.container {
 		padding: 0 65px;
