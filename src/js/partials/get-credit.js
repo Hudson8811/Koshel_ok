@@ -1,5 +1,7 @@
 
 moment.locale('ru');
+
+var ready_gc = false;
 var radInAchivements = [];
 
 function funcDays(day) {
@@ -30,31 +32,26 @@ $(document).ready(function () {
             nextArrow: '<div class="my-achievements-slider-arrow mas-arrow-next"><svg width="13" height="25" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 24.5L9.90529 12.5005L-1.04907e-06 0.5L3.09406 0.5L13 12.5005L3.09406 24.5L0 24.5Z" fill="#BABBC0"/></svg></div>',
             responsive: [
                 {
-                    breakpoint: 1024,
+                    breakpoint: 1440,
                     settings: {
                         slidesToShow: 3,
-                        slidesToScroll: 3,
-                        infinite: true,
-                        dots: true
+                        slidesToScroll: 1,
                     }
                 },
                 {
-                    breakpoint: 600,
+                    breakpoint: 767,
                     settings: {
                         slidesToShow: 2,
-                        slidesToScroll: 2
+                        slidesToScroll: 1
                     }
                 },
                 {
-                    breakpoint: 480,
+                    breakpoint: 639,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1
                     }
                 }
-                // You can unslick at a given breakpoint now by adding:
-                // settings: "unslick"
-                // instead of a settings object
             ]
         });
     }
@@ -109,17 +106,50 @@ $(document).ready(function () {
                 slide: function (event, ui) {
                     displayValue.html(before + ui.value + after + (days == 'true' ? funcDays(ui.value) : ''));
                     if (displayExpDate != undefined) {
-                        displayExpDate.html(moment().add(ui.value, 'days').format('D MMMM'));
+                        displayExpDate.html('до ' + moment().add(ui.value, 'days').format('D MMMM'));
                     }
                 }
             });
 
             displayValue.html(before + $(this).slider("value") + after + (days == 'true' ? funcDays($(this).slider("value")) : ''));
             if (displayExpDate != undefined) {
-                displayExpDate.html(moment().add($(this).slider("value"), 'days').format('D MMMM'));
+                displayExpDate.html('до ' + moment().add($(this).slider("value"), 'days').format('D MMMM'));
             }
         }
         );
     }
-
+    ready_gc = true;
+    adaptGC();
 });
+
+
+$(window).resize(function () { adaptGC(); });
+
+
+
+adaptGC = function () {
+    if (ready_gc) {
+        if (window.innerWidth > 1440 && radInAchivements[0].indOption.radius != 84) {
+
+            radInAchivements.forEach(function (value, index) {
+                value.option('barWidth', 12);
+                value.option('radius', 84);
+            });
+        }
+        if (window.innerWidth <= 1440 && window.innerWidth > 639  && radInAchivements[0].indOption.radius != 52) {
+            /*console.log(radInAchivements[0].indOption.barWidth);
+            console.log(radInAchivements[0].indOption.radius);*/
+
+            radInAchivements.forEach(function (value, index) {
+                value.option('barWidth', 9);
+                value.option('radius', 52);
+            });
+        }
+        if (window.innerWidth <= 639 && radInAchivements[0].indOption.radius != 63) {
+            radInAchivements.forEach(function (value, index) {
+                value.option('barWidth', 8);
+                value.option('radius', 63);
+            });
+        }
+    }
+}

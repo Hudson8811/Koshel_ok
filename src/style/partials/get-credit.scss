@@ -1,5 +1,6 @@
 .get-credit-page {
     padding-top: 64px;
+    padding-bottom: 80px;
 }
 
 .credit-registration {
@@ -8,14 +9,13 @@
 }
 
 .page-block-title {
+    text-transform: uppercase;
+    color: #3DA163;
     font-family: SF Pro Display;
-    font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 135%;
-
-    text-transform: uppercase;
-    color: #3DA163;
+    font-style: normal;
 }
 
 
@@ -25,9 +25,9 @@
 
 .gc-slider-range {
     &__name {
+        color: #94959A;
         font-size: 13px;
         line-height: 135%;
-        color: #94959A;
     }
 
     &:not(:last-child) {
@@ -38,43 +38,43 @@
 }
 
 .gc-slider-range-info {
-    margin-top: 3px;
     display: flex;
     align-items: center;
+    margin-top: 3px;
 
     &__value {
         flex-grow: 1;
+        min-width: 96px;
+        color: #000000;
         font-weight: 600;
         font-size: 20px;
         line-height: 135%;
-        color: #000000;
-        min-width: 96px;
     }
 
     &__expiration-date {
-        margin-left: 8px;
         display: flex;
         align-items: flex-end;
         flex-grow: 99999;
+        margin-left: 8px;
+        color: #000000;
         font-size: 13px;
         line-height: 1;
-        color: #000000;
 
         &::before {
-            content: '';
-            margin-right: 8px;
             display: block;
             width: 16px;
             height: 16px;
+            margin-right: 8px;
+            content: '';
             background: url(../img/calendar.svg) no-repeat center center;
 
         }
     }
 
     &__max {
+        color: #000000;
         font-size: 13px;
         line-height: 135%;
-        color: #000000;
 
         span {
             font-weight: bold;
@@ -82,18 +82,18 @@
     }
 
     &__hint {
-        margin-left: 8px;
-        width: 20px;
-        height: 20px;
-        border-radius: 100px;
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 20px;
+        height: 20px;
+        margin-left: 8px;
+        cursor: pointer;
+        color: #0C3362;
+        border-radius: 100px;
         background: #FFFCE1;
         font-size: 13px;
         line-height: 16px;
-        color: #0C3362;
-        cursor: pointer;
     }
 }
 
@@ -101,37 +101,37 @@
     margin-top: 23px;
 
     &.ui-widget.ui-widget-content {
-        background: #E3E4EB;
-        border-radius: 100px;
         height: 7px;
         border: 0;
+        border-radius: 100px;
+        background: #E3E4EB;
     }
 
     &.ui-slider .ui-slider-range {
-        background: linear-gradient(90deg, #3DA163 calc(100% - 40px), #208A48 100%);
         border-radius: 7px;
+        background: linear-gradient(90deg, #3DA163 calc(100% - 75px), #208A48 100%);
     }
 
     .ui-state-default,
     .ui-widget-content .ui-state-default {
         top: -7px;
-        border: 0;
+        box-sizing: border-box;
         width: 35px;
         height: 21px;
-        background: #3DA163;
-        border: 2px solid #4CB373;
-        box-sizing: border-box;
-        border-radius: 15px;
         cursor: pointer;
+        border: 0;
+        border: 2px solid #4CB373;
+        border-radius: 15px;
+        background: #3DA163;
 
         &::before {
-            content: '';
+            z-index: 1;
             display: block;
             width: 13px;
             height: 9px;
+            content: '';
             background: url(../img/slider-strips.svg) no-repeat center center;
             @include center-absolute();
-            z-index: 1;
         }
     }
 }
@@ -145,31 +145,30 @@
 .cra-results {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #E3E4EB;
     margin-top: 1px;
-    padding-bottom: 17px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #E3E4EB;
 }
 
 .cra-results-item {
     &__name {
+        color: #000000;
         font-size: 13px;
         line-height: 135%;
-
-        color: #000000;
     }
 
     &__val {
         margin-top: 1px;
+        color: #3DA163;
         font-weight: 600;
         font-size: 20px;
         line-height: 135%;
-        color: #3DA163;
     }
 }
 
 .cra-bottom {
-    margin-top: 49px;
     display: flex;
+    margin-top: 49px;
     margin-top: 24px;
 
     &__left {
@@ -178,15 +177,15 @@
 
     &__right {
         display: flex;
-        justify-content: center;
         flex-direction: column;
+        justify-content: center;
 
         a {
-            margin-top: 5px;
             display: block;
+            margin-top: 5px;
+            color: #0C3362;
             font-size: 13px;
             line-height: 150%;
-            color: #0C3362;
 
             &:hover {}
 
@@ -202,19 +201,16 @@
 }
 
 .cra-apply-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 163px;
     height: 51px;
-
+    color: #FFFFFF;
     background: #3DA163;
     font-weight: 500;
     font-size: 15px;
     line-height: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: #FFFFFF;
-
 }
 
 
@@ -233,9 +229,8 @@
 
 .my-achievements-slider-container {
     margin-top: 31px;
-
-    background: #F1F2F7;
     padding: 48px 28px 48px;
+    background: #F1F2F7;
 
 }
 
@@ -256,10 +251,10 @@
 }
 
 .my-achievements-slider-arrow {
-    cursor: pointer;
     position: absolute;
-    top: 134.5px;
     z-index: 1;
+    top: 86.5px;
+    cursor: pointer;
 
     &.slick-disabled {
         display: none !important;
@@ -278,38 +273,35 @@
 
 
     &__name {
-        font-style: normal;
+        margin-top: 12px;
+        text-align: center;
+        color: #3DA163;
         font-weight: 500;
         font-size: 20px;
         line-height: 135%;
-
-        text-align: center;
-
-        margin-top: 12px;
-        color: #3DA163;
+        font-style: normal;
     }
 }
 
 .achivement-indicator-CW {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
     position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .achivement-indicator-container {}
 
 .achivement-indicator__picture {
-    @include center-absolute();
-    max-width: 35%;
     width: 100%;
+    max-width: 35%;
+    @include center-absolute();
 }
 
 .achicement-info {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     margin: 0 auto;
 
     &__main {
@@ -317,17 +309,17 @@
         margin: 0 auto;
         margin-top: 16px;
         text-align: left;
-
+        color: #000000;
         font-size: 15px;
         line-height: 135%;
-        color: #000000;
 
         span {
             font-weight: bold;
         }
 
         p {
-            margin-bottom: 5px;}
+            margin-bottom: 5px;
+        }
     }
 
 
@@ -335,10 +327,238 @@
     &__small-grey {
         width: 199px;
         max-width: 100%;
+        margin-top: 15px;
         text-align: center;
+        color: #94959A;
         font-size: 13px;
         line-height: 135%;
-        color: #94959A;
-        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width:1440px) {
+    .get-credit-page {
+        padding-top: 24px;
+        padding-bottom: 80px;
+
+        .container.flex-row {
+            display: block;
+        }
+    }
+
+    .credit-registration {
+        width: 100%;
+        margin-top: 42px;
+        margin-right: 0;
+    }
+
+    .credit-registration-sliders {
+        margin-right: 55px;
+    }
+
+    .gc-slider-range:not(:last-child) {
+        margin-bottom: 40px;
+    }
+
+    .credit-registration-apply {
+        margin-top: 55px;
+        padding: 25px 63px 32px;
+    }
+
+    .cra-results {
+        margin-right: 56px;
+        padding-bottom: 17px;
+    }
+
+    .my-achievements {
+        width: 100%;
+        margin-top: 66px;
+        margin-right: 0;
+    }
+
+    .achicement-info {
+        display: none;
+    }
+
+    .achivement-indicator__picture {
+        max-width: 31%;
+    }
+
+    .my-achievements-slider-arrow {
+        top: 47.5px;
+    }
+
+    .mas-arrow-prev {
+        left: -4px;
+    }
+
+    .mas-arrow-next {
+        right: -4px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .get-credit-page {
+        padding-top: 65px;
+    }
+
+    .main {
+        padding-left: 0;
+    }
+
+    .credit-registration {
+        margin-top: 0;
+    }
+
+    .cra-results {
+        margin-right: 29px;
+        margin-left: 26px;
+        padding-bottom: 18px;
+
+    }
+
+    .cra-bottom {
+        padding-left: 26px;
+
+        &__right a {
+            margin-top: 3px;
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .get-credit-page {
+        padding-top: 50px;
+    }
+
+    .credit-registration-sliders {
+        margin-top: 25px;
+        margin-right: 0px;
+    }
+
+    .gc-slider-range:not(:last-child) {
+        margin-bottom: 32px;
+    }
+
+    .gc-slider-range-info__expiration-date {
+        font-size: 13px;
+    }
+
+    .credit-registration-apply {
+        margin-top: 47px;
+        padding: 25px 25px 32px;
+    }
+
+    .cra-results {
+        margin: 0;
+    }
+
+    .cra-bottom {
+        padding-left: 0;
+    }
+
+    .my-achievements {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .my-achievements-slider-container {
+        margin-top: 24px;
+    }
+
+    .my-achievements-slider-container {
+        padding: 48px 49px 48px;
+    }
+
+
+    .mas-arrow-prev {
+        left: -25px;
+    }
+
+    .mas-arrow-next {
+        right: -25px;
+    }
+
+    .my-achievements-slider-arrow {
+        top: 46.5px;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .get-credit-page {
+        padding-top: 42px;
+    }
+
+    .gc-slider-range-info {
+        flex-wrap: wrap;
+    }
+
+    .gc-slider-range-info__expiration-date {
+        order: 99;
+        width: 100%;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        margin-left: 0;
+    }
+
+    .credit-registration-apply {
+        margin-top: 39px;
+
+        padding: 25px 32px 32px;
+    }
+
+    .cra-results {
+        flex-wrap: wrap;
+        padding-bottom: 17px;
+    }
+
+    .cra-results-item {
+        width: 50%;
+
+        &:not(:nth-child(1)):not(:nth-child(2)) {
+            margin-top: 28px;
+        }
+    }
+
+    .cra-bottom {
+        flex-direction: column-reverse;
+        margin-top: 17px;
+    }
+
+    .cra-bottom__right a {
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+
+    .cra-bottom__left {
+        margin-right: 0;
+    }
+
+    .cra-apply-btn {
+        width: 100%;
+        margin-top: 29px;
+    }
+
+    .my-achievements {
+
+        margin-top: 42px;
+    }
+
+    .my-achievements-slider-container {
+        padding: 23px 49px 25px;
+    }
+
+    .achivement-indicator__picture {
+        max-width: 42%;
+    }
+
+    .my-achievements-slider-arrow {
+        top: 57.5px;
+    }
+
+    .mas-arrow-prev {
+        left: -36px;
+    }
+    .mas-arrow-next {
+        right: -36px;
     }
 }

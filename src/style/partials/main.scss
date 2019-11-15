@@ -1,21 +1,22 @@
-$font1: "SF Pro Display", sans-serif;
+$font1: "SF Pro Display",
+sans-serif;
 
 $green: #3DA163;
 $gray: #9DAFC3;
 $blue: #0C3362;
 $white: #ffffff;
 
-a{
+a {
 	text-decoration: none;
 }
 
-*:focus{
+*:focus {
 	outline: none;
 }
 
 
 
-body{
+body {
 	color: #3b3b3b;
 	font-family: $font1;
 	font-size: 15px;
@@ -23,24 +24,26 @@ body{
 	background: #ffffff;
 }
 
-.container{
+.container {
 	margin: 0 auto;
 	box-sizing: border-box;
 }
-img{
+
+img {
 	max-width: 100%;
 	height: auto;
 }
 
 
-.info-block{
+.info-block {
 	background: #FFFCE1;
 	width: 100%;
 	box-sizing: border-box;
 	padding: 16px 16px 24px;
 	display: flex;
 	align-items: flex-start;
-	.img{
+
+	.img {
 		width: 26px;
 		height: 27px;
 		display: block;
@@ -49,14 +52,15 @@ img{
 		background-size: contain;
 		flex-shrink: 0;
 	}
-	.text{
+
+	.text {
 		font-size: 13px;
 		line-height: 135%;
 		color: #000000;
 	}
 }
 
-.section-title{
+.section-title {
 	font-weight: 500;
 	font-size: 20px;
 	line-height: 135%;
@@ -65,11 +69,12 @@ img{
 	margin-bottom: 40px;
 }
 
-.input-block{
+.input-block {
 	width: 100%;
 	max-width: 100%;
 	position: relative;
-	span{
+
+	span {
 		color: #94959A;
 		font-size: 15px;
 		text-align: left;
@@ -85,7 +90,8 @@ img{
 		padding-left: 16px;
 		padding-top: 18px;
 	}
-	input{
+
+	input {
 		background: #ffffff;
 		font-family: $font1;
 		font-weight: 400;
@@ -100,25 +106,29 @@ img{
 		padding-right: 36px;
 		padding-top: 20px;
 		height: 48px;
-		&.datepicker{
+
+		&.datepicker {
 			background-image: url("../img/date.svg");
 			background-repeat: no-repeat;
 			background-position: right 16px center;
 			background-size: 21px auto;
 		}
-		&:focus{
+
+		&:focus {
 			outline: none;
 			border: 1px solid #8F929F;
 		}
+
 		&:focus,
-		&:not(:focus):valid{
-			~span{
+		&:not(:focus):valid {
+			~span {
 				padding-top: 9px !important;
 				font-size: 11px;
 			}
 		}
 	}
-	.hit{
+
+	.hit {
 		width: 20px;
 		height: 20px;
 		background: #FFFCE1;
@@ -134,15 +144,18 @@ img{
 		border-radius: 100%;
 	}
 }
-.input-row{
+
+.input-row {
 	display: flex;
 	flex-wrap: wrap;
 	margin-left: -30px;
 	margin-top: -24px;
-	+.input-row{
+
+	+.input-row {
 		margin-top: 0;
 	}
-	.input-block{
+
+	.input-block {
 		flex: 1 0 150px;
 		margin-left: 30px;
 		margin-top: 24px;
@@ -150,33 +163,76 @@ img{
 }
 
 
-.form-style{
-	.form-section{
-		+.form-section{
+.form-style {
+	.form-section {
+		+.form-section {
 			margin-top: 64px;
 		}
 	}
 }
 
 
-.main{
+.main {
 	padding-left: 269px;
 	display: flex;
 }
 
-.form-col{
+.form-col {
 	width: 540px;
 	max-width: 100%;
-	form{
+
+	form {
 		margin-top: 36px;
 	}
 }
 
-.flex-row{
+.flex-row {
 	display: flex;
 }
 
-.container{
+.container {
 	width: 1110px;
 	margin: 0 auto;
+}
+
+.hovco {
+	cursor: pointer;
+	transition: opacity .2s;
+
+	&:hover {
+		opacity: .8;
+	}
+}
+
+@media screen and (max-width: 1440px) {
+	.container {
+		padding-left: 30px;
+		padding-right: 47px;
+		width: 767px;
+	}
+
+	.main {
+		padding-left: 257px;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.container {
+		padding: 0 39px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.container {
+		padding: 0 65px;
+		width: 640px;
+
+	}
+}
+
+@media screen and (max-width: 639px) {
+	.container {
+		padding: 0;
+		width: 100%;
+		max-width: calc(100% - 45px * 2);
+	}
 }
