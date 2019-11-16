@@ -1,6 +1,5 @@
 $font1: "SF Pro Display",
 sans-serif;
-
 $green: #3DA163;
 $gray: #9DAFC3;
 $blue: #0C3362;
@@ -14,19 +13,17 @@ a {
 	outline: none;
 }
 
-
-
 body {
+	margin: 0;
 	color: #3b3b3b;
+	background: #ffffff;
 	font-family: $font1;
 	font-size: 15px;
-	margin: 0;
-	background: #ffffff;
 }
 
 .container {
-	margin: 0 auto;
 	box-sizing: border-box;
+	margin: 0 auto;
 }
 
 img {
@@ -34,78 +31,108 @@ img {
 	height: auto;
 }
 
-
 .info-block {
-	background: #FFFCE1;
-	width: 100%;
-	box-sizing: border-box;
-	padding: 16px 16px 24px;
 	display: flex;
 	align-items: flex-start;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 18px 16px 21px;
+	background: #FFFCE1;
 
 	.img {
+		display: block;
+		flex-shrink: 0;
 		width: 26px;
 		height: 27px;
-		display: block;
 		margin-right: 14px;
 		background: url("../img/info.svg") center center no-repeat;
 		background-size: contain;
-		flex-shrink: 0;
 	}
 
 	.text {
+		color: #000000;
 		font-size: 13px;
 		line-height: 135%;
-		color: #000000;
 	}
 }
 
 .section-title {
+	margin-bottom: 32px;
+	text-transform: uppercase;
+	color: $green;
 	font-weight: 500;
 	font-size: 20px;
 	line-height: 135%;
-	text-transform: uppercase;
-	color: $green;
-	margin-bottom: 40px;
+
+	&.incorrect {
+		color: #EB5757;
+	}
 }
 
 .input-block {
+	position: relative;
 	width: 100%;
 	max-width: 100%;
-	position: relative;
 
-	span {
-		color: #94959A;
-		font-size: 15px;
-		text-align: left;
+	span.input-label {
+		position: absolute;
+		top: 0;
+		left: 0;
+		box-sizing: border-box;
 		width: 100%;
 		height: 100%;
-		position: absolute;
-		pointer-events: none;
-		left: 0;
-		top: 0;
-		transition: 0.2s ease all;
-		box-sizing: border-box;
-		line-height: 0.8;
-		padding-left: 16px;
 		padding-top: 18px;
+		padding-left: 16px;
+		transition: 0.2s ease all;
+		text-align: left;
+		pointer-events: none;
+		color: #94959A;
+		font-size: 15px;
+		line-height: 0.8;
 	}
 
-	input {
+	&:not(.input-block_with-label) {
+		input {
+			padding: 0 35px 0px 16px;
+		}
+	}
+
+	input,
+	.ui-selectmenu-button.ui-button {
+		box-sizing: border-box;
+		width: 100%;
+		height: 48px;
+		padding-top: 20px;
+		padding-right: 36px;
+		padding-left: 15px;
+		color: #000000;
+		border: 1px solid #C6C8D4;
+		border-radius: 1px;
 		background: #ffffff;
 		font-family: $font1;
 		font-weight: 400;
-		width: 100%;
-		border: 1px solid #C6C8D4;
-		box-sizing: border-box;
-		border-radius: 1px;
 		font-size: 15px;
 		line-height: 18px;
-		color: #000000;
-		padding-left: 15px;
-		padding-right: 36px;
-		padding-top: 20px;
-		height: 48px;
+
+		&.ui-widget {
+			display: flex;
+			align-items: center;
+			padding: 0 75px 0 15px;
+			color: #94959A;
+			font-size: 15px;
+			line-height: 18px;
+		}
+
+		.ui-icon-triangle-1-s {
+			position: absolute;
+			right: 50px;
+			transition-duration: .2s;
+			background: url(../img/arr-d.svg) no-repeat center center;
+		}
+
+		&.ui-selectmenu-button-open .ui-icon-triangle-1-s {
+			transform: rotate(180deg);
+		}
 
 		&.datepicker {
 			background-image: url("../img/date.svg");
@@ -115,8 +142,8 @@ img {
 		}
 
 		&:focus {
-			outline: none;
 			border: 1px solid #8F929F;
+			outline: none;
 		}
 
 		&:focus,
@@ -128,28 +155,72 @@ img {
 		}
 	}
 
+	&--money {
+		input {
+			padding: 0 85px 0px 16px !important;
+		}
+
+		>.in-m-currency {
+			position: absolute;
+			right: 52px;
+			bottom: 13px;
+			pointer-events: none;
+			color: #000000;
+			font-size: 13px;
+			line-height: 16px;
+		}
+	}
+
 	.hit {
+		position: absolute;
+		top: 50%;
+		right: 16px;
 		width: 20px;
 		height: 20px;
-		background: #FFFCE1;
-		position: absolute;
-		right: 16px;
-		top: 50%;
 		margin-top: -10px;
+		cursor: default;
 		text-align: center;
 		color: $blue;
+		border-radius: 100%;
+		background: #FFFCE1;
 		font-size: 13px;
 		line-height: 20px;
-		cursor: default;
-		border-radius: 100%;
+	}
+
+	&--error-empty {
+		&::after {
+			width: 100%;
+			position: absolute;
+			top: 100%;
+			z-index: 1;
+			display: block;
+			display: flex;
+			align-items: center;
+			content: 'Это поле должно быть заполнено';
+			color: #FFFFFF;
+			background: #EB5757;
+			font-weight: normal;
+			font-size: 13px;
+			line-height: 16px;
+			padding: 3px 18px;
+			font-style: normal;
+			box-sizing: border-box;
+		}
+
+		input,
+		.ui-selectmenu-button.ui-button {
+			border: 1px solid #EB5757 !important;
+
+
+		}
 	}
 }
 
 .input-row {
 	display: flex;
 	flex-wrap: wrap;
-	margin-left: -30px;
 	margin-top: -24px;
+	margin-left: -30px;
 
 	+.input-row {
 		margin-top: 0;
@@ -157,24 +228,29 @@ img {
 
 	.input-block {
 		flex: 1 0 150px;
-		margin-left: 30px;
 		margin-top: 24px;
+		margin-left: 30px;
+
+		&--series {
+			flex: 0 0 160px;
+			width: 210px;
+		}
+
+		&--number {}
 	}
 }
-
 
 .form-style {
 	.form-section {
 		+.form-section {
-			margin-top: 64px;
+			margin-top: 66px;
 		}
 	}
 }
 
-
 .main {
-	padding-left: 269px;
 	display: flex;
+	padding-left: 269px;
 }
 
 .form-col {
@@ -182,7 +258,7 @@ img {
 	max-width: 100%;
 
 	form {
-		margin-top: 36px;
+		margin-top: 38px;
 	}
 }
 
@@ -191,12 +267,13 @@ img {
 }
 
 .container {
+	box-sizing: content-box;
 	width: 1110px;
 	margin: 0 auto;
-	box-sizing: content-box;
 	padding-right: 269px;
-	&.flex-row{
-align-items: flex-start;
+
+	&.flex-row {
+		align-items: flex-start;
 	}
 }
 
@@ -209,11 +286,152 @@ align-items: flex-start;
 	}
 }
 
+.photo-display {
+	display: block;
+	box-sizing: border-box;
+	width: 176px;
+	height: 150px;
+	cursor: pointer;
+	transition: opacity .2s;
+	border: 1px solid #E3E4EB;
+
+	&:hover {
+		opacity: .7;
+	}
+
+	&--empty-pic {
+		background: url('../img/no-avatar.svg') no-repeat center bottom;
+		background-size: auto 89.8%;
+
+		.img-photo-display {
+			display: none;
+		}
+	}
+
+	.input-photo-display {
+		display: none;
+	}
+
+	.img-photo-display {
+		box-sizing: border-box;
+		width: 100%;
+		height: 100%;
+		padding: 2px;
+		object-fit: cover;
+		object-position: center;
+	}
+}
+
+.radio-toggle {
+	display: flex;
+	margin-bottom: 41px;
+	padding-top: 1px;
+
+	input {
+		display: none;
+
+		&:checked+.toggle-label+.toggle-block {
+			.toggle-pill {
+				left: calc(100% - 2px - 20px);
+			}
+		}
+
+		&:not(:checked)+.toggle-label,
+		&:checked+.toggle-label+.toggle-block+.toggle-label {
+			pointer-events: none;
+			color: #000000;
+			font-size: 15px;
+			line-height: 135%;
+		}
+	}
+
+	.toggle-label {
+		cursor: pointer;
+		color: #94959A;
+		font-weight: 500;
+		font-size: 15px;
+		line-height: 135%;
+	}
+
+	.toggle-block {
+		position: relative;
+		display: block;
+		width: 48px;
+		height: 24px;
+		margin: 0 17px;
+		cursor: pointer;
+		border-radius: 30px;
+		background: #3DA163;
+
+		.toggle-pill {
+			position: absolute;
+			top: 2px;
+			left: 2px;
+			width: 20px;
+			height: 20px;
+			transition-duration: .2s;
+			border-radius: 50%;
+			background: #FFFFFF;
+		}
+	}
+}
+
+.checkbox-block {
+	margin-top: 32px;
+
+	.checkbox {
+		input {
+			display: none;
+
+			&:checked+span {
+				&::before {
+					border: 1px solid #369058;
+					background: #3DA163;
+				}
+			}
+		}
+
+		span {
+			position: relative;
+			display: flex;
+			padding-top: 3px;
+			padding-left: 40px;
+			cursor: pointer;
+
+			&::before,
+			&::after {
+				position: absolute;
+				display: block;
+				content: '';
+			}
+
+			&::before {
+				top: 0;
+				left: 0;
+				box-sizing: border-box;
+				width: 24px;
+				height: 24px;
+				transition-duration: .2s;
+				border: 2px solid #369058;
+				border-radius: 1px;
+			}
+
+			&::after {
+				top: 6px;
+				left: 5px;
+				width: 16px;
+				height: 11.64px;
+				background: url(../img/checkbox.svg) no-repeat center center;
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 1440px) {
 	.container {
-		padding-left: 30px;
-		padding-right: 47px;
 		width: 767px;
+		padding-right: 47px;
+		padding-left: 30px;
 	}
 
 	.main {
@@ -229,16 +447,15 @@ align-items: flex-start;
 
 @media screen and (max-width: 767px) {
 	.container {
-		padding: 0 65px;
 		width: 640px;
-
+		padding: 0 65px;
 	}
 }
 
 @media screen and (max-width: 639px) {
 	.container {
-		padding: 0;
 		width: 100%;
 		max-width: calc(100% - 45px * 2);
+		padding: 0;
 	}
 }

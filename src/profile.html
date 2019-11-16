@@ -28,29 +28,34 @@
                     </div>
                     <form action="/" class="form-style">
                         <div class="form-section" id="form-section-1">
-                            <div class="section-title">Личные данные</div>
+                            <div class="section-title incorrect">Личные данные</div>
                             <div class="input-row">
-                                <div class="input-block"><input type="text" name="" required><span>Фамилия</span>
+                                <div class="input-block  input-block_with-label"><input type="text" name=""
+                                        required><span class="input-label">Фамилия</span>
                                     <div class="hit" title="Подсказка">?</div>
                                 </div>
-                                <div class="input-block"><input type="text" name="" required><span>Имя</span>
-                                    <div class="hit" title="Подсказка">?</div>
-                                </div>
-                            </div>
-                            <div class="input-row">
-                                <div class="input-block"><input type="text" name="" required><span>Отчество</span>
-                                    <div class="hit" title="Подсказка">?</div>
-                                </div>
-                                <div class="input-block"><input class="datepicker" type="text" name=""
-                                        required><span>Дата рождения</span></div>
-                            </div>
-                            <div class="input-row">
-                                <div class="input-block"><input type="text" name="" required><span>Место рождения</span>
+                                <div class="input-block  input-block_with-label input-block--error-empty"><input type="text" name=""
+                                        required><span class="input-label">Имя</span>
                                     <div class="hit" title="Подсказка">?</div>
                                 </div>
                             </div>
                             <div class="input-row">
-                                <div class="input-block"><input type="text" name="" required><span>Идентификационный
+                                <div class="input-block  input-block_with-label"><input type="text" name=""
+                                        required><span class="input-label">Отчество</span>
+                                    <div class="hit" title="Подсказка">?</div>
+                                </div>
+                                <div class="input-block  input-block_with-label"><input class="datepicker" type="text"
+                                        name="" required><span class="input-label">Дата рождения</span></div>
+                            </div>
+                            <div class="input-row">
+                                <div class="input-block  input-block_with-label"><input type="text" name=""
+                                        required><span class="input-label">Место рождения</span>
+                                    <div class="hit" title="Подсказка">?</div>
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="input-block  input-block_with-label"><input type="text" name=""
+                                        required><span class="input-label">Идентификационный
                                         номер</span>
                                     <div class="hit" title="Подсказка">?</div>
                                 </div>
@@ -60,52 +65,64 @@
                         <div class="form-section" id="form-section-2">
                             <div class="section-title">паспортные данные</div>
                             <div class="radio-toggle">
-                                <input id="type1" name="type" type="radio" />
-                                <input id="type2" name="type" type="radio" />
-                                <label for="type1" class="toggle-label">Паспорт старого образца</label>
-                                <div class="toggle-block">
+                                <input id="type-doc" name="type" type="checkbox" />
+                                <label for="type-doc" class="toggle-label">Паспорт старого образца</label>
+                                <label for="type-doc" class="toggle-block">
                                     <div class="toggle-pill"></div>
-                                </div>
-                                <label for="type2" class="toggle-label">Паспорт ID карта</label>
+                                </label>
+                                <label for="type-doc" class="toggle-label">Паспорт ID карта</label>
                             </div>
                             <div class="input-row">
-                                <div class="input-block"><input type="text" name="" required><span>Серия</span></div>
-                                <div class="input-block"><input type="text" name="" required><span>Номер</span>
+                                <div class="input-block input-block--series  input-block_with-label"><input type="text"
+                                        name="" required><span class="input-label">Серия</span></div>
+                                <div class="input-block input-block--number  input-block_with-label"><input type="text"
+                                        name="" required><span class="input-label">Номер</span>
                                     <div class="hit" title="Подсказка">?</div>
                                 </div>
                             </div>
 
                             <div class="passport-photo-row">
-                                <div class="input-row-title"></div>
-                                <label><input type="file"><span class="pass-img"></span></label>
-                                <div>Фото с паспортом или ID-картой значительно увеличит вероятность получения кредита
+                                <div class="input-block-title">Фото с паспортом</div>
+                                <div>
+                                    <label class="photo-display photo-display--empty-pic">
+                                        <input type='file' class="input-photo-display" />
+                                        <img class="img-photo-display" src="#" alt="your pasp image" />
+                                    </label>
+                                    <span>Фото с паспортом или ID-картой значительно увеличит вероятность получения
+                                        кредита</span>
                                 </div>
                             </div>
 
                             <div class="input-row">
-                                <div class="input-block"><input type="text" name="" required><span>Кем выдан</span>
+                                <div class="input-block  input-block_with-label"><input type="text" name=""
+                                        required><span class="input-label">Кем выдан</span>
                                     <div class="hit" title="Подсказка">?</div>
                                 </div>
                             </div>
 
                             <div class="input-row">
-                                <div class="input-block"><input class="datepicker" type="text" name=""
-                                        required><span>Дата выдачи</span></div>
+                                <div class="input-block  input-block_with-label"><input class="datepicker" type="text"
+                                        name="" required><span class="input-label">Дата выдачи</span></div>
+                                <div class="input-block  input-block_with-label"> </div>
                             </div>
                         </div>
 
                         <div class="form-section" id="form-section-3">
                             <div class="section-title">Дополнительная информация</div>
                             <div class="input-row">
-                                <div class="input-block"><input type="text" name="" required><span>Семейное
+                                <div class="input-block  input-block_with-label"><input type="text" name=""
+                                        required><span class="input-label">Семейное
                                         положение</span></div>
-                                <div class="input-block"><input type="text" name="" required><span>Кол-во детей до 18
+                                <div class="input-block  input-block_with-label"><input type="text" name=""
+                                        required><span class="input-label">Кол-во детей до 18
                                         лет</span></div>
                             </div>
                             <div class="input-row">
-                                <div class="input-block"><input type="text" name="" required><span>Образование</span>
+                                <div class="input-block  input-block_with-label"><input type="text" name=""
+                                        required><span class="input-label">Образование</span>
                                 </div>
-                                <div class="input-block"><input type="text" name="" required><span>Специальность</span>
+                                <div class="input-block  input-block_with-label"><input type="text" name=""
+                                        required><span class="input-label">Специальность</span>
                                 </div>
                             </div>
                         </div>
@@ -113,14 +130,23 @@
                         <div class="form-section" id="form-section-4">
                             <div class="section-title">Адрес регистрации</div>
                             <div class="input-row">
-                                <div class="input-block"><input type="text" name="" required><span>Область</span></div>
-                                <div class="input-block"><input type="text" name="" required><span>Город</span></div>
-                                <div class="input-block"><input type="text" name="" required><span>Улица</span></div>
+                                <div class="input-block  input-block_with-label"><input type="text" name=""
+                                        required><span class="input-label">Область</span></div>
+                                <div class="input-block  input-block_with-label"><input type="text" name=""
+                                        required><span class="input-label">Город</span></div>
                             </div>
                             <div class="input-row">
-                                <div class="input-block"><input type="text" name="" required><span>Дом</span></div>
-                                <div class="input-block"><input type="text" name="" required><span>Корпус</span></div>
-                                <div class="input-block"><input type="text" name="" required><span>Квартира</span></div>
+                                <div class="input-block  input-block_with-label"><input type="text" name=""
+                                        required><span class="input-label">Улица</span></div>
+                                <div class="input-block  input-block_with-label"></div>
+                            </div>
+                            <div class="input-row">
+                                <div class="input-block  input-block_with-label"><input type="text" name=""
+                                        required><span class="input-label">Дом</span></div>
+                                <div class="input-block  input-block_with-label"><input type="text" name=""
+                                        required><span class="input-label">Корпус</span></div>
+                                <div class="input-block  input-block_with-label"><input type="text" name=""
+                                        required><span class="input-label">Квартира</span></div>
                             </div>
                             <div class="checkbox-block"><label class="checkbox"><input type="checkbox"
                                         name=""><span>Адрес регистрации совпадает с адресом прописки</span></label>
@@ -130,31 +156,62 @@
                         <div class="form-section" id="form-section-5">
                             <div class="section-title">Общая информация</div>
                             <div class="input-row">
-                                <div class="input-block input-block_with-label"><input type="text" name=""
-                                        required><span>Цель получения займа</span>
-                                    <div class="hit" title="Подсказка">?</div>
+                                <div class="input-container">
+                                    <div class="input-block-title">Цель получения займа </div>
+                                    <div class="input-block">
+                                        <select name="" id="" class="select-ui">
+                                            <option value="">Бизнес вложения</option>
+                                            <option value="">Бизнес вложения</option>
+                                            <option value="">Бизнес вложения</option>
+                                            <option value="">Бизнес вложения</option>
+                                        </select>
+                                        <div class="hit" title="Подсказка">?</div>
+                                    </div>
                                 </div>
+
                             </div>
                             <div class="input-row">
-                                <div class="input-block input-block_with-label"><input type="text" name=""
-                                        required><span>Тип занятости</span>
-                                    <div class="hit" title="Подсказка">?</div>
+                                <div class="input-container">
+                                    <div class="input-block-title">Тип занятости</div>
+                                    <div class="input-block">
+                                        <select name="" id="" class="select-ui">
+                                            <option value="">Предприниматель</option>
+                                            <option value="">Предприниматель</option>
+                                            <option value="">Предприниматель</option>
+                                        </select>
+                                        <div class="hit" title="Подсказка">?</div>
+                                    </div>
                                 </div>
+
                             </div>
                             <div class="input-row">
-                                <div class="input-block input-block_with-label"><input type="text" name=""
-                                        required><span>Вид деятельности</span>
-                                    <div class="hit" title="Подсказка">?</div>
+                                <div class="input-container">
+                                    <div class="input-block-title">Вид деятельности</div>
+                                    <div class="input-block"> <select name="" id="" class="select-ui">
+                                            <option value="">Учет, аудит, бухгалтерия</option>
+                                            <option value="">Учет, аудит, бухгалтерия</option>
+                                        </select>
+                                        <div class="hit" title="Подсказка">?</div>
+                                    </div>
                                 </div>
+
                             </div>
                             <div class="input-row">
-                                <div class="input-block input-block_with-label"><input type="text" name=""
-                                        required><span>Ваш доход в месяд</span>
-                                    <div class="hit" title="Подсказка">?</div>
+                                <div class="input-container">
+                                    <div class="input-block-title">Ваш доход в месяц</div>
+                                    <div class="input-block input-block--money"><input type="text" name=""
+                                            class="input-money" required>
+                                        <div class="in-m-currency">.грн</div>
+                                        <div class="hit" title="Подсказка">?</div>
+                                    </div>
                                 </div>
-                                <div class="input-block input-block_with-label"><input type="text" name=""
-                                        required><span>Сумма расходов в месяц</span>
-                                    <div class="hit" title="Подсказка">?</div>
+                                <div class="input-container">
+                                    <div class="input-block-title">Сумма расходов в месяц</div>
+                                    <div class="input-block input-block--money"><input type="text" name=""
+                                            class="input-money" required>
+                                        <div class="in-m-currency">.грн</div>
+                                        <div class="hit" title="Подсказка">?</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -162,37 +219,81 @@
                         <div class="form-section" id="form-section-6">
                             <div class="section-title">Контактная информация</div>
                             <div class="input-row">
-                                <div class="input-block"><input type="text" name="" required><span>Номер телефона</span>
+                                <div class="input-block input-block_with-label"><input type="text" name='phone'
+                                        required><span class="input-label">Номер телефона</span>
                                     <div class="hit" title="Подсказка">?</div>
                                 </div>
-                                <div class="input-block"><input type="text" name="" required><span>E-mail</span>
+                                <div class="input-block input-block_with-label"><input type="text" name='email'
+                                        required><span class="input-label">E-mail</span>
+                                    <div class="hit" title="Подсказка">?</div>
+                                </div>
+                            </div>
+                            <div class="crz-label">Контакты родственников/знакомых</div>
+                            <div class="contact-num-label">Контакт 1</div>
+                            <div class="input-row">
+                                <div class="input-container">
+                                    <div class="input-block">
+                                        <select name="" id="" class="select-ui">
+                                            <option value="">Кем приходится</option>
+                                            <option value="">Предприниматель</option>
+                                            <option value="">Предприниматель</option>
+                                        </select>
+                                        <div class="hit" title="Подсказка">?</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="input-block"><input type="text" name="" required><span
+                                        class="input-label">ФИО</span>
+                                    <div class="hit" title="Подсказка">?</div>
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="input-block"><input type="text" name="" required><span
+                                        class="input-label">Телефон</span>
                                     <div class="hit" title="Подсказка">?</div>
                                 </div>
                             </div>
 
+                            <div class="contact-num-label">Контакт 2</div>
                             <div class="input-row">
-                                <div class="input-block"><input type="text" name="" required><span>Кем приходится</span>
+
+                                <div class="input-container">
+                                    <div class="input-block">
+                                        <select name="" id="" class="select-ui">
+                                            <option value="">Кем приходится</option>
+                                            <option value="">Предприниматель</option>
+                                            <option value="">Предприниматель</option>
+                                        </select>
+                                        <div class="hit" title="Подсказка">?</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="input-block"><input type="text" name="" required><span
+                                        class="input-label">ФИО</span>
                                     <div class="hit" title="Подсказка">?</div>
                                 </div>
                             </div>
                             <div class="input-row">
-                                <div class="input-block"><input type="text" name="" required><span>ФИО</span>
-                                    <div class="hit" title="Подсказка">?</div>
-                                </div>
-                            </div>
-                            <div class="input-row">
-                                <div class="input-block"><input type="text" name="" required><span>Телефон</span>
+                                <div class="input-block"><input type="text" name="" required><span
+                                        class="input-label">Телефон</span>
                                     <div class="hit" title="Подсказка">?</div>
                                 </div>
                             </div>
                         </div>
                         <div class="form-section" id="form-section-last">
-                            <div class="checkbox-block"><label class="checkbox"><input type="checkbox" name=""><span>Я
+                            <div class="checkbox-block"><label class="checkbox"><input type="checkbox" name="">
+                                    <span>Я
                                         соглашаюсь с правилами предоставления займов</span></label></div>
-                            <div class="checkbox-block"><label class="checkbox"><input type="checkbox" name=""><span>Даю
+                            <div class="checkbox-block"><label class="checkbox"><input type="checkbox" name="">
+                                    <span>Даю
                                         согласие на передачу и обработку моих данных телекоммуникационными
                                         операторами</span></label></div>
-                            <button type="submit" class="btn">Сохранить данные</button>
+                            <div class="submit-block incorrect">
+                                <button type="submit" class="btn btn-submit-prof hovco">Сохранить данные</button>
+                                <div class="submit-block__log">Проверьте правильность заполнения всех полей. Ошибок обнаружено: 4</div>
+                            </div>
                         </div>
                     </form>
                 </div>
