@@ -1,7 +1,9 @@
-
 .my-cards-page{
   margin-top: 64px;
   padding-bottom: 100px;
+  @include media((
+          margin-top: (640: 100px),
+  ));
   .my-cards-grid{
     display: flex;
     flex-wrap: wrap;
@@ -420,6 +422,7 @@
         cursor: pointer;
         width: 350px;
         height: 210px;
+        max-width: 100%;
         border-radius: 8px;
         background: #E3E6F4;
         display: block;
@@ -429,7 +432,7 @@
         overflow: hidden;
         transition: background 0.3s ease;
         @include media((
-                width: (640: 285px),
+                height: (640: 170px),
         ));
         &.front{
           z-index: 2;
@@ -457,6 +460,12 @@
             position: absolute;
             left: 34px;
             top: 24px;
+            @include media((
+                    left: (640: 24px),
+                    top: (640: 20px),
+                    width: (640: 48px),
+                    height: (640: 30px),
+            ));
           }
           &.visa{
             .logo{
@@ -479,6 +488,10 @@
             position: absolute;
             left: 0;
             top: 98px;
+            @include media((
+                    padding: (640: 0 15px),
+                    top: (640: 70px),
+            ));
             input{
               width: 59px;
               height: 32px;
@@ -498,6 +511,10 @@
             align-items: center;
             width: 168px;
             margin: 155px auto 0;
+            @include media((
+                    margin-left: (640: 15px),
+                    margin-top: (640: 120px),
+            ));
             .ui-selectmenu-text{
               margin-right: 0;
             }
@@ -532,7 +549,7 @@
             justify-content: flex-end;
             margin-top: 32px;
             @include media((
-                    margin-top: (768: 133px),
+                    margin-top: (768: 133px, 640: 93px),
             ));
             .input-block{
               width: 91px;
@@ -578,14 +595,26 @@
       align-items: center;
       justify-content: space-between;
       margin-top: 64px;
+      @include media((
+              margin: (768: 48px),
+      ));
       .verifed-block{
         display: flex;
         align-items: center;
+        @include media((
+                display: (640: none),
+        ));
         img{
           width: 110px;
           display: block;
+          @include media((
+                  width: (768: 90px),
+          ));
           +img{
             margin-left: 32px;
+            @include media((
+                    margin-left: (768: 20px),
+            ));
           }
         }
       }
@@ -606,10 +635,18 @@
       line-height: 18px;
       cursor: pointer;
       margin: 0;
+      @include media((
+              width: (640: 100%),
+              text-align: (640: center),
+              justify-content: (640: center),
+      ));
     }
   }
   .info-block{
     margin-top: 40px;
     align-items: flex-start !important;
+    @include media((
+            width: (640: 100%),
+    ));
   }
 }
