@@ -1,0 +1,547 @@
+.my-cards-page{
+  margin-top: 64px;
+  padding-bottom: 100px;
+  .my-cards-grid{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -24px;
+    .card-item{
+      width: 350px;
+      margin-left: 30px;
+      margin-top: 24px;
+      @include media((
+              width: (1200: 330px),
+      ));
+      .hidden{
+        display: none;
+      }
+      .card{
+        user-select: none;
+        cursor: pointer;
+        width: 100%;
+        height: 210px;
+        border-radius: 8px;
+        background: #D1D4E2;
+        display: block;
+        position: relative;
+        box-sizing: border-box;
+        z-index: 1;
+        overflow: hidden;
+        transition: background 0.3s ease;
+        @include media((
+                height: (1200: 198px),
+        ));
+        &::before{
+          content: "";
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 100%), #D1D4E2;
+          transition: background 0.3s ease;
+          clip-path: polygon(0 0, 58% 0, 29% 100%, 0% 100%);
+          z-index: -1;
+        }
+        &.active,&:hover{
+          &::before{
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 100%), $green;
+          }
+          background: $green;
+        }
+        .logo{
+          width: 84px;
+          height: 41px;
+          background-size: contain;
+          background-position: center center;
+          background-repeat: no-repeat;
+          display: block;
+          position: absolute;
+          left: 34px;
+          top: 24px;
+
+          @include media((
+                  width: (1200: 63px),
+                  left: (1200: 26px),
+          ));
+        }
+        .status{
+          font-size: 13px;
+          line-height: 1;
+          color: #FFFFFF;
+          background: #FF4545;
+          position: absolute;
+          right: 32px;
+          top: 38px;
+          padding: 0 4px 2px;
+
+          @include media((
+                  right: (1200: 26px),
+          ));
+        }
+        .number{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          box-sizing: border-box;
+          width: 100%;
+          padding: 0 32px 0 34px;
+          position: absolute;
+          left: 0;
+          top: 100px;
+
+          @include media((
+                  top: (1200: 90px),
+                  padding: (1200: 0 26px),
+          ));
+          .secret{
+            display: block;
+            width: 56px;
+            height: 11px;
+            background: url("../img/hidden.svg") center center no-repeat;
+            background-size: 100% auto;
+          }
+          .last-number{
+            color: #ffffff;
+            font-size: 22px;
+          }
+        }
+        .bank-row{
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          box-sizing: border-box;
+          padding: 0 32px 0 34px;
+          position: absolute;
+          color: #ffffff;
+          top: 149px;
+          left: 0;
+          @include media((
+                  top: (1200: 137px),
+                  padding: (1200: 0 26px),
+          ));
+          .label{
+            font-weight: 300;
+            font-size: 8px;
+            line-height: 10px;
+          }
+          .name{
+            .value{
+              font-size: 15px;
+              line-height: 18px;
+              margin-top: 7px;
+            }
+          }
+          .date{
+            .value{
+              font-weight: 300;
+              font-size: 18px;
+              line-height: 21px;
+              margin-top: 4px;
+            }
+          }
+        }
+
+        &.visa{
+          .logo{
+            background-image: url("../img/visa.svg");
+          }
+        }
+        &.mastercard{
+          .logo{
+            background-image: url("../img/mastercard.svg");
+          }
+        }
+        &.verifed{
+          .status{
+            color: $green;
+            background: $white;
+            &::before{
+              content: "";
+              display: inline-block;
+              width: 13px;
+              height: 13px;
+              margin-right: 4px;
+              background: url("../img/verifed.svg") center center no-repeat;
+              background-size: 100%;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+    }
+    .add-card{
+      height: 210px;
+      background: #F1F2F7;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      @include media((
+              height: (1200: 198px, 768: 54px),
+              width: (768: 100%),
+              flex-direction: (768: row-reverse),
+      ));
+      .circle{
+        width: 64px;
+        height: 64px;
+        background: #BABBC0 url("../img/plus.svg") center center no-repeat;
+        background-size: 16px 16px;
+        border-radius: 100%;
+        @include media((
+                width: (768: 32px),
+                height: (768: 32px),
+                background-size: (768: 8px 8px),
+        ));
+      }
+      .text{
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        color: #94959A;
+        text-align: center;
+        margin-top: 16px;
+        @include media((
+                margin-top: (768: 198px),
+                margin-right: (768: 24px),
+        ));
+      }
+      &:hover{
+        .circle{
+          background-color: $green;
+        }
+        .text{
+          color: $green;
+        }
+      }
+    }
+  }
+
+  .info-block{
+    max-width: 730px;
+    margin-top: 40px;
+    @media all and (min-width: 768px) {
+      align-items: center;
+    }
+  }
+  .btn{
+    margin-top: 88px;
+  }
+}
+
+.modal-style{
+  display: none;
+  padding: 0;
+  .close-modal{
+    width: 21px;
+    height: 21px;
+    display: block;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    background: transparent;
+    padding: 0;
+    svg{
+      width: 100%;
+      height: 100%;
+    }
+    &:hover{
+      svg path{
+        fill: $green;
+      }
+    }
+  }
+  .modal-title{
+    font-weight: 500;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: $green;
+    height: 84px;
+    background: #F1F2F7;
+    box-sizing: border-box;
+    padding: 0 72px;
+    max-width: 715px;
+    width: 100%;
+    @include media((
+            padding: (1200: 0 50,768: 0 45px,640:0 30px),
+    ));
+    span{
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  .modal-form{
+    padding: 0 72px;
+    max-width: 715px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding-bottom: 64px;
+    box-sizing: border-box;
+    @include media((
+            padding: (1200: 0 50,768: 0 45px,640:0 30px),
+    ));
+    .modal-form-block{
+      margin-bottom: 40px;
+      &__title{
+        font-weight: 500;
+        font-size: 15px;
+        color: #000000;
+        line-height: 135%;
+        margin-bottom: 24px;
+      }
+    }
+    .banks-grid{
+      @include flex-row(0px,0px);
+      .item{
+        @include flex-block(140px, 0px, 0px, true, 4);
+        box-sizing: border-box;
+        height: 71px;
+        background: #FFFFFF;
+        border: 1px solid #E3E4EB;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        &.active{
+          border: 2px solid $green;
+        }
+        input{
+          display: none;
+          img{
+            max-width: 80%;
+            max-height: 80%;
+            display: block;
+          }
+        }
+        &.other-banks{
+          .text{
+            font-size: 13px;
+            line-height: 135%;
+            color: #000000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:after{
+              content: "";
+              display: block;
+              margin-left: 4px;
+              width: 14px;
+              height: 11px;
+              background: url("../img/arr-d.svg") center center no-repeat;
+              background-size: 100% auto;
+            }
+          }
+        }
+      }
+    }
+    .card-block{
+      position: relative;
+      height: 234px;
+      @include media((
+              height: (768: 306px),
+      ));
+      .card{
+        user-select: none;
+        cursor: pointer;
+        width: 350px;
+        height: 210px;
+        border-radius: 8px;
+        background: #E3E6F4;
+        display: block;
+        position: relative;
+        box-sizing: border-box;
+        z-index: 1;
+        overflow: hidden;
+        transition: background 0.3s ease;
+        &.front{
+          z-index: 2;
+          box-shadow: 7px 9px 15px rgba(0, 0, 0, 0.15);
+          &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 100%), #E3E6F4;
+            transition: background 0.3s ease;
+            clip-path: polygon(0 0, 58% 0, 29% 100%, 0% 100%);
+            z-index: -1;
+          }
+          .logo{
+            width: 84px;
+            height: 41px;
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            display: block;
+            position: absolute;
+            left: 34px;
+            top: 24px;
+          }
+          &.visa{
+            .logo{
+              background-image: url("../img/visa.svg");
+            }
+          }
+          &.mastercard{
+            .logo{
+              background-image: url("../img/mastercard.svg");
+            }
+          }
+
+          .number{
+            display: flex;
+            box-sizing: border-box;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 0 32px;
+            position: absolute;
+            left: 0;
+            top: 98px;
+            input{
+              width: 59px;
+              height: 32px;
+              background: #FFFFFF;
+              border: 1px solid #E3E4EB;
+              box-sizing: border-box;
+              border-radius: 1px;
+              text-align: center;
+              font-size: 15px;
+              display: flex;
+              align-items: center;
+              color: #000000;
+            }
+          }
+          .date-row{
+            display: flex;
+            align-items: center;
+            width: 168px;
+            margin: 155px auto 0;
+            .ui-selectmenu-text{
+              margin-right: 0;
+            }
+            .input-block .ui-selectmenu-button.ui-button.ui-widget{
+              width: 76px;
+              height: 24px;
+              padding: 0 20px 0 10px;
+              font-size: 15px;
+              color: #000000;
+            }
+            .input-block .ui-selectmenu-button.ui-button .ui-icon-triangle-1-s{
+              position: absolute;
+              right: 5px;
+            }
+          }
+        }
+        &.back{
+          position: absolute;
+          z-index: 1;
+          right: 0;
+          bottom: 0;
+          @include media((
+                  right: (768: auto),
+                  left: (768: 0),
+          ));
+          .csv-row{
+            width: 100%;
+            background: #D1D4E2;
+            box-sizing: border-box;
+            padding: 13px 27px;
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 32px;
+            @include media((
+                    margin-top: (768: 133px),
+            ));
+            .input-block{
+              width: 91px;
+              input{
+                height: 32px;
+                background: #FFFFFF;
+                border: 1px solid #E3E4EB;
+                box-sizing: border-box;
+                border-radius: 1px;
+                padding-left: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .card-info{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-left: -30px;
+      margin-top: -30px;
+      .item{
+        margin-left: 30px;
+        margin-top: 30px;
+        .label{
+          font-size: 15px;
+          line-height: 150%;
+          color: #94959A;
+        }
+        .value{
+          font-size: 15px;
+          line-height: 150%;
+          font-weight: 500;
+          color: $green;
+          white-space: nowrap;
+        }
+      }
+
+    }
+    .btn-row{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 64px;
+      .verifed-block{
+        display: flex;
+        align-items: center;
+        img{
+          width: 110px;
+          display: block;
+          +img{
+            margin-left: 32px;
+          }
+        }
+      }
+    }
+    .btn{
+      min-width: 154px;
+      display: flex;
+      align-items: center;
+      height: 51px;
+      padding: 0 40px;
+      color: #FFFFFF;
+      border: 0;
+      outline: none;
+      background: $green;
+      font-family: $font1;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+      cursor: pointer;
+      margin: 0;
+    }
+  }
+  .info-block{
+    margin-top: 40px;
+    align-items: flex-start !important;
+  }
+}

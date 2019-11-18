@@ -15,3 +15,4 @@
 //= partials/header.js
 //= partials/profile.js
 //= partials/get-credit.js
+//= partials/my-cards.js

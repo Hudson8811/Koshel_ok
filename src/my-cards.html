@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Тайтл</title>
+
+    <link rel="icon" href="favicon.ico">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+<div class="wrapper my-cards-page">
+    //= template/sidebar.html
+
+    <div class="main">
+        <div class="container2">
+            <form action="" class="form-style">
+                <div class="section-title">Контактная информация</div>
+
+                <div class="my-cards-grid">
+                    <div class="card-item">
+                        <div class="card mastercard verifed active">
+                            <div class="logo"></div>
+                            <div class="status">верифицирована</div>
+                            <div class="number">
+                                <div class="secret"></div>
+                                <div class="secret"></div>
+                                <div class="secret"></div>
+                                <div class="last-number">3341</div>
+                            </div>
+                            <div class="bank-row">
+                                <div class="name">
+                                    <div class="label">БАНК</div>
+                                    <div class="value">ПРИВАТ БАНК</div>
+                                </div>
+                                <div class="date">
+                                    <div class="label">MONTH/YEAR</div>
+                                    <div class="value">12/20</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkbox-block"><label class="checkbox"><input type="radio" checked name="card" value="1"><span>Основная карта (Приват Банк)</span></label></div>
+                    </div>
+                    <div class="card-item">
+                        <div class="card visa">
+                            <div class="logo"></div>
+                            <div class="status">нужна верификация</div>
+                            <div class="number">
+                                <div class="secret"></div>
+                                <div class="secret"></div>
+                                <div class="secret"></div>
+                                <div class="last-number">3341</div>
+                            </div>
+                            <div class="bank-row">
+                                <div class="name">
+                                    <div class="label">БАНК</div>
+                                    <div class="value">ПРИВАТ БАНК</div>
+                                </div>
+                                <div class="date">
+                                    <div class="label">MONTH/YEAR</div>
+                                    <div class="value">12/20</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkbox-block"><label class="checkbox"><input type="radio" name="card" value="2"><span>Основная карта (Райфайзен банк Аваль)</span></label></div>
+                    </div>
+                    <div class="card-item">
+                        <div class="card visa">
+                            <div class="logo"></div>
+                            <div class="status">нужна верификация</div>
+                            <div class="number">
+                                <div class="secret"></div>
+                                <div class="secret"></div>
+                                <div class="secret"></div>
+                                <div class="last-number">3341</div>
+                            </div>
+                            <div class="bank-row">
+                                <div class="name">
+                                    <div class="label">БАНК</div>
+                                    <div class="value">ПРИВАТ БАНК</div>
+                                </div>
+                                <div class="date">
+                                    <div class="label">MONTH/YEAR</div>
+                                    <div class="value">12/20</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkbox-block"><label class="checkbox"><input type="radio" name="card" value="3"><span>Основная карта (Приват Банк)</span></label></div>
+                    </div>
+                    <div class="card-item add-card">
+                        <div class="circle"></div>
+                        <div class="text">Добавить карту</div>
+                    </div>
+                </div>
+                <div class="info-block">
+                    <div class="img"></div>
+                    <div class="text">Все платежи по кредиту (начисление денег и оплата кредита) осуществляются с основной карты</div>
+                </div>
+                <button type="submit" class="btn btn-submit-prof hovco">Оформить кредит</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-style" id="cart-modal">
+        <button class="close-modal" data-fancybox-close>
+            <button class="close-modal" data-fancybox-close>
+                <svg viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.6297 3.46519e-07L21 1.37028L1.37028 21L0 19.6297L19.6297 3.46519e-07Z" fill="#BABBC0"/>
+                    <path d="M3.97909e-05 1.37028L1.37032 0L21 19.6297L19.6297 21L3.97909e-05 1.37028Z" fill="#BABBC0"/>
+                </svg>
+            </button>
+        <div class="modal-title"><span>добавление карты</span></div>
+        <form action="/" class="modal-form">
+            <div class="modal-form-block">
+                <div class="modal-form-block__title">Карту какого банка Вы используете?</div>
+                <div class="banks-grid">
+                    <label class="item">
+                        <input type="radio" name="bank" value="">
+                        <img src="img/bank1.png" alt="">
+                    </label>
+                    <label class="item">
+                        <input type="radio" name="bank" value="">
+                        <img src="img/bank2.png" alt="">
+                    </label>
+                    <label class="item">
+                        <input type="radio" name="bank" value="">
+                        <img src="img/bank3.png" alt="">
+                    </label>
+                    <label class="item">
+                        <input type="radio" name="bank" value="">
+                        <img src="img/bank4.png" alt="">
+                    </label>
+                    <label class="item">
+                        <input type="radio" name="bank" value="">
+                        <img src="img/bank5.png" alt="">
+                    </label>
+                    <label class="item">
+                        <input type="radio" name="bank" value="">
+                        <img src="img/bank6.png" alt="">
+                    </label>
+                    <label class="item">
+                        <input type="radio" name="bank" value="">
+                        <img src="img/bank7.png" alt="">
+                    </label>
+                    <div class="item other-banks">
+                        <div class="text">Другой банк</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-form-block">
+                <div class="modal-form-block__title">Введите данные по Вашей банковской карте</div>
+                <div class="card-block">
+                    <div class="card mastercard front">
+                        <div class="logo"></div>
+                        <div class="number">
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                        </div>
+
+                        <div class="date-row">
+                            <div class="input-block">
+                                <select name="" class="select-ui">
+                                    <option>мес</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                    <option value="">5</option>
+                                </select>
+                            </div>
+
+                            <div class="input-block">
+                                <select name="" class="select-ui">
+                                    <option>год</option>
+                                    <option value="">2020</option>
+                                    <option value="">2021</option>
+                                    <option value="">2022</option>
+                                    <option value="">9999</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card back">
+                        <div class="csv-row">
+                            <div class="input-block"><input type="text" name="" placeholder="CVV2" required maxlength="3">
+                                <div class="hit" title="Подсказка">?</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-block">
+                    <div class="img"></div>
+                    <div class="text">Карта должна быть выпущена украинским банком. На Вашей банковской карте должно быть не менее 1 грн. Эта сумма будет временно заблокирована для проверки карты.</div>
+                </div>
+            </div>
+            <div class="btn-row">
+                <button type="submit" class="btn">Отправить</button>
+                <div class="verifed-block">
+                    <img src="img/verifed-visa.svg" alt="">
+                    <img src="img/mastercardsecure.svg" alt="">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal-style" id="verification-modal">
+        <button class="close-modal" data-fancybox-close>
+            <svg viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.6297 3.46519e-07L21 1.37028L1.37028 21L0 19.6297L19.6297 3.46519e-07Z" fill="#BABBC0"/>
+                <path d="M3.97909e-05 1.37028L1.37032 0L21 19.6297L19.6297 21L3.97909e-05 1.37028Z" fill="#BABBC0"/>
+            </svg>
+        </button>
+        <div class="modal-title"><span>верификация</span></div>
+        <form action="/" class="modal-form">
+            <div class="modal-form-block">
+                <div class="card-info">
+                    <div class="item">
+                        <div class="label">Компания:</div>
+                        <div class="value">koshelok.net</div>
+                    </div>
+                    <div class="item">
+                        <div class="label">Номер заказа:</div>
+                        <div class="value">20551 30107 9000</div>
+                    </div>
+                    <div class="item">
+                        <div class="label">Описание:</div>
+                        <div class="value">Верификация карты</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-form-block">
+                <div class="modal-form-block__title">Введите данные по Вашей банковской карте</div>
+                <div class="card-block">
+                    <div class="card mastercard front">
+                        <div class="logo"></div>
+                        <div class="number">
+                            <input type="text" maxlength="4">
+                            <input type="text" maxlength="4">
+                            <input type="text" maxlength="4">
+                            <input type="text" maxlength="4">
+                        </div>
+
+                        <div class="date-row">
+                            <div class="input-block">
+                                <select name="" class="select-ui">
+                                    <option>мес</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                    <option value="">5</option>
+                                </select>
+                            </div>
+
+                            <div class="input-block">
+                                <select name="" class="select-ui">
+                                    <option>год</option>
+                                    <option value="">2020</option>
+                                    <option value="">2021</option>
+                                    <option value="">2022</option>
+                                    <option value="">9999</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card back">
+                        <div class="csv-row">
+                            <div class="input-block"><input type="text" name="" placeholder="CVV2" required maxlength="3">
+                                <div class="hit" title="Подсказка">?</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-block">
+                    <div class="img"></div>
+                    <div class="text">На Вашей банковской карте должно быть не менее 1 грн. Эта сумма будет временно заблокирована для проверки карты.</div>
+                </div>
+            </div>
+            <div class="btn-row">
+                <button type="submit" class="btn">Отправить</button>
+                <div class="verifed-block">
+                    <img src="img/verifed-visa.svg" alt="">
+                    <img src="img/mastercardsecure.svg" alt="">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<script src="js/main.js"></script>
+
+
+</body>
+
+</html>
