@@ -31,6 +31,22 @@ img {
 	height: auto;
 }
 
+.btn {
+	display: flex;
+	align-items: center;
+	height: 51px;
+	padding: 0 40px;
+	color: #FFFFFF;
+	border: 0;
+	outline: none;
+	background: #3DA163;
+	font-family: SF Pro Display;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 18px;
+	cursor: pointer;
+}
+
 .info-block {
 	display: flex;
 	align-items: flex-start;
@@ -434,7 +450,7 @@ img {
 
 @media screen and (max-width: 1500px) {
 	.container {
-		width:690px;
+		width: 690px;
 		padding-right: 47px;
 		padding-left: 30px;
 	}

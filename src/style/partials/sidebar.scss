@@ -1,0 +1,330 @@
+.sidebar {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    box-sizing: border-box;
+    width: 269px;
+    height: 100vh;
+    background: $blue;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .flex-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        width: 100%;
+        min-height: 100%;
+        padding: 5.05vh 48px;
+    }
+
+    .logo {
+        display: block;
+        width: 140px;
+
+        svg {
+            width: 100%;
+        }
+    }
+
+    .langs {
+        margin-top: 8px;
+
+        a {
+            color: $gray;
+            font-size: 15px;
+            line-height: 135%;
+
+            +a {
+                margin-left: 10px;
+            }
+
+            &:hover {
+                color: $white;
+            }
+
+            &.active {
+                color: $green;
+            }
+        }
+    }
+
+    .profile-menu {
+        margin-top: 6.73vh;
+
+        >div {
+            +div {
+                margin-top: 25px;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                color: $gray;
+                font-size: 15px;
+                line-height: 150%;
+
+                .img {
+                    display: block;
+                    flex-shrink: 0;
+                    width: 21px;
+                    height: 20px;
+                    margin-right: 16px;
+
+                    svg {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+
+                &:hover {
+                    color: $white;
+
+                    .img {
+                        svg * {
+                            fill: $white;
+                        }
+                    }
+                }
+
+                &.active {
+                    color: $green;
+
+                    .img {
+                        svg * {
+                            fill: $green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .phones {
+        margin-top: 6.73vh;
+
+        >div {
+            a {
+                color: #ffffff;
+                font-size: 15px;
+                line-height: 200%;
+
+                &:hover {
+                    color: $green;
+                }
+            }
+        }
+    }
+
+    .copy {
+        margin-top: 6.73vh;
+        color: #8599B0;
+        font-size: 15px;
+        line-height: 150%;
+    }
+}
+
+.header-mobile-burger {
+    display: none;
+}
+
+.header-mobile-s-p {
+    display: none;
+}
+
+@media screen and (max-width:1023px) {
+    .sidebar {
+        width: unset;
+        min-width: unset;
+        height: unset;
+        min-height: unset;
+
+        .flex-block {
+            width: unset;
+            min-width: unset;
+            height: unset;
+            min-height: unset;
+            padding: 0;
+        }
+    }
+
+    .sidebar .top-block {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #0C3362;
+
+
+    }
+
+
+    .header-mobile {
+        display: flex;
+        align-items: center;
+        height: 64px;
+
+        .logo {
+            width: 101px;
+            padding-top: 2px;
+
+
+            img {}
+        }
+    }
+
+    .header-mobile-burger {
+        position: relative;
+        display: block;
+        width: 22px;
+        height: 28px;
+        margin-right: 34px;
+        margin-left: 43px;
+        cursor: pointer;
+
+        span,
+        span::before,
+        span::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 28px;
+            height: 2px;
+            margin-top: -1px;
+            margin-left: -15px;
+            background-color: #fff;
+        }
+
+        span::before,
+        span::after {
+            margin-left: -14px;
+            content: '';
+            transition: 0.2s;
+        }
+
+        span::before {
+            transform: translateY(-10px);
+        }
+
+        span::after {
+            transform: translateY(10px);
+        }
+
+
+        &.menu-open {
+            span {
+                height: 0;
+
+                &::before {
+                    transform: rotate(45deg);
+                }
+
+                &::after {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+
+
+
+    .header-mobile-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        box-sizing: border-box;
+        width: 340px;
+        padding: 18px 20px 0 72px;
+        background: #0C3362;
+
+        .langs {
+
+            .active {}
+
+            a {}
+        }
+
+        .profile-menu {
+            margin-top: 28px;
+            margin-bottom: 40px;
+            margin-left: -2px;
+
+            div {
+
+                a {
+                    line-height: 125%;
+
+                    .img {
+
+                        svg {
+
+                            path {}
+
+                            rect {}
+                        }
+                    }
+
+                    .label {}
+                }
+            }
+        }
+
+        .header-mobile-s-p {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            width: 100%;
+            height: 56px;
+            padding-left: 102px;
+            color: #FFFFFF;
+            background: #3DA163;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 135%;
+            font-style: normal;
+
+            &::after {
+                display: flex;
+                justify-content: flex-end;
+                margin-right: 22px;
+                flex-grow: 1;
+                width: 25px;
+                height: 30px;
+                content: '';
+                background: url(../img/phone.svg) no-repeat center right;
+            }
+
+            &:hover {
+                background: lighten($color: #3DA163, $amount: 1.5);
+            }
+        }
+
+    }
+
+    .bottom-block {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 1023px) {
+
+    .profile-page .main .form-col {
+        width: 630px;
+        margin: 0 auto;
+    }
+    .input-row .input-block--series {
+        flex: 0 0 240px;
+        width: unset;
+    }
+}
