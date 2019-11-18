@@ -1,3 +1,4 @@
+
 .my-cards-page{
   margin-top: 64px;
   padding-bottom: 100px;
@@ -6,13 +7,26 @@
     flex-wrap: wrap;
     margin-left: -30px;
     margin-top: -24px;
+    position: relative;
+    @include media((
+            margin-top: (640: 0),
+            margin-left: (640: 0),
+            padding-bottom: (640: 144px),
+    ));
     .card-item{
       width: 350px;
       margin-left: 30px;
       margin-top: 24px;
       @include media((
-              width: (1200: 330px),
+              width: (1200: 330px,640: 285px),
+              margin-top: (640: 0),
+              margin-left: (640: 0),
       ));
+      +.card-item:not(.add-card){
+        @include media((
+                margin-top: (640: -115px),
+        ));
+      }
       .hidden{
         display: none;
       }
@@ -30,7 +44,8 @@
         overflow: hidden;
         transition: background 0.3s ease;
         @include media((
-                height: (1200: 198px),
+                height: (1200: 198px, 640: 171px),
+                box-shadow: (640: 0px 3px 6px rgba(0, 0, 0, 0.11)),
         ));
         &::before{
           content: "";
@@ -63,7 +78,8 @@
           top: 24px;
 
           @include media((
-                  width: (1200: 63px),
+                  width: (1200: 63px, 640: 47px),
+                  height: (640: 30px),
                   left: (1200: 26px),
           ));
         }
@@ -93,7 +109,7 @@
           top: 100px;
 
           @include media((
-                  top: (1200: 90px),
+                  top: (1200: 90px, 640: 76px),
                   padding: (1200: 0 26px),
           ));
           .secret{
@@ -102,10 +118,16 @@
             height: 11px;
             background: url("../img/hidden.svg") center center no-repeat;
             background-size: 100% auto;
+            @include media((
+                    width: (640: 48px),
+            ));
           }
           .last-number{
             color: #ffffff;
             font-size: 22px;
+            @include media((
+                    font-size: (640: 20px),
+            ));
           }
         }
         .bank-row{
@@ -119,19 +141,25 @@
           top: 149px;
           left: 0;
           @include media((
-                  top: (1200: 137px),
+                  top: (1200: 137px, 640: 128px),
                   padding: (1200: 0 26px),
           ));
           .label{
             font-weight: 300;
             font-size: 8px;
             line-height: 10px;
+            @include media((
+                    display: (640: none),
+            ));
           }
           .name{
             .value{
               font-size: 15px;
               line-height: 18px;
               margin-top: 7px;
+              @include media((
+                      margin-top: (640: 0),
+              ));
             }
           }
           .date{
@@ -140,6 +168,10 @@
               font-size: 18px;
               line-height: 21px;
               margin-top: 4px;
+              @include media((
+                      margin-top: (640: 0),
+                      font-size: (640: 16px),
+              ));
             }
           }
         }
@@ -170,7 +202,25 @@
             }
           }
         }
+        &.active{
+          +.checkbox-block{
+            @include media((
+                    display: (640: block),
+                    position: (640: absolute),
+                    left: (640: 0),
+                    top: (640: calc(100% - 128px)),
+                    padding: (640: 0 24px),
+                    margin-top: (640: 0)
+            ));
+          }
+        }
       }
+      .checkbox-block{
+        @include media((
+                display: (640: none),
+        ));
+      }
+
     }
     .add-card{
       height: 210px;
@@ -185,6 +235,9 @@
               height: (1200: 198px, 768: 54px),
               width: (768: 100%),
               flex-direction: (768: row-reverse),
+              position: (640: absolute),
+              left: (640: 0),
+              bottom: (640: 0),
       ));
       .circle{
         width: 64px;
@@ -206,7 +259,7 @@
         text-align: center;
         margin-top: 16px;
         @include media((
-                margin-top: (768: 198px),
+                margin-top: (768: 0),
                 margin-right: (768: 24px),
         ));
       }
@@ -227,9 +280,21 @@
     @media all and (min-width: 768px) {
       align-items: center;
     }
+    @include media((
+            margin-top: (640:24px),
+            margin-left: (640:-30px),
+            margin-right: (640:-30px),
+            width: (640:calc(100% + 60px)),
+    ));
   }
   .btn{
+    text-align: center;
     margin-top: 88px;
+    justify-content: center;
+    @include media((
+            width: (640:100%),
+            margin-top: (640:48px),
+    ));
   }
 }
 
@@ -348,7 +413,7 @@
       position: relative;
       height: 234px;
       @include media((
-              height: (768: 306px),
+              height: (768: 306px, 640:269px),
       ));
       .card{
         user-select: none;
@@ -363,6 +428,9 @@
         z-index: 1;
         overflow: hidden;
         transition: background 0.3s ease;
+        @include media((
+                width: (640: 285px),
+        ));
         &.front{
           z-index: 2;
           box-shadow: 7px 9px 15px rgba(0, 0, 0, 0.15);

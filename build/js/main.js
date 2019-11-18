@@ -6761,7 +6761,7 @@ this._delay(function(){n===this.counter&&this.refreshPositions(!s)})},_clear:fun
             hh : '%d ώρες',
             d : 'μία μέρα',
             dd : '%d μέρες',
-            M : 'ένας μήνας',
+            M : 'ένας μήν��ς',
             MM : '%d μήνες',
             y : 'ένας χρόνος',
             yy : '%d χρόνια'
@@ -15051,6 +15051,8 @@ $(document).ready(function () {
         $(elem).siblings('.checkbox-block').find('input').prop("checked", true);
         $('.my-cards-page .card').removeClass('active');
         $(elem).addClass('active');
+        var parent = $(elem).parents('.card-item');
+        zindexCard(parent);
     }
 
     $('#cart-modal .banks-grid .item').click(function () {
@@ -15064,4 +15066,20 @@ $(document).ready(function () {
             modal: true,
         });
     });
+
+    function zindexCard(card) {
+        card.css('z-index','50');
+        var zindex = 49;
+        card.nextAll('.card-item:not(.add-class)').each(function () {
+           $(this).css('z-index',zindex);
+            zindex--;
+        });
+         zindex = 49;
+        card.prevAll('.card-item:not(.add-class)').each(function () {
+            $(this).css('z-index',zindex);
+            zindex--;
+        });
+    }
+
+    zindexCard($('.my-cards-page .card-item:not(.add-class):first-child'));
 });

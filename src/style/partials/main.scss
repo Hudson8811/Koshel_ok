@@ -33,7 +33,7 @@ body {
 	margin: 0 auto 0 7.55vw;
 	@include media((
 		margin: (1200: 0 auto),
-		width: (1200: 700px, 768: 520px),
+		width: (1200: 700px, 768: 520px, 640: 285px),
 		padding: (1200: 0 30px),
 	));
 }
@@ -79,6 +79,14 @@ img {
 	&.incorrect {
 		color: #EB5757;
 	}
+}
+
+.section-info{
+	margin-bottom: 24px;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 135%;
+	color: #000000;
 }
 
 .input-block {
