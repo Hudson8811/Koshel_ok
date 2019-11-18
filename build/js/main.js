@@ -8408,7 +8408,7 @@ this._delay(function(){n===this.counter&&this.refreshPositions(!s)})},_clear:fun
         months: 'જાન્યુઆરી_ફેબ્રુઆરી_માર્ચ_એપ્રિલ_મે_જૂન_જુલાઈ_ઑગસ્ટ_સપ્ટેમ્બર_ઑક્ટ્બર_નવેમ્બર_ડિસેમ્બર'.split('_'),
         monthsShort: 'જાન્યુ._ફેબ્રુ._માર્ચ_એપ્રિ._મે_જૂન_જુલા._ઑગ._સપ્ટે._ઑક્ટ્._નવે._ડિસે.'.split('_'),
         monthsParseExact: true,
-        weekdays: 'રવિવાર_સોમવાર_મંગળવાર_બુધ્વાર_ગુર���વાર_શુક્રવાર_શનિવાર'.split('_'),
+        weekdays: 'રવિવાર_સોમવાર_મંગળવાર_બુધ્વાર_ગુરુવાર_શુક્રવાર_શનિવાર'.split('_'),
         weekdaysShort: 'રવિ_સોમ_મંગળ_બુધ્_ગુરુ_શુક્ર_શનિ'.split('_'),
         weekdaysMin: 'ર_સો_મં_બુ_ગુ_શુ_શ'.split('_'),
         longDateFormat: {
@@ -15035,3 +15035,22 @@ adaptGC = function () {
         }
     }
 }
+$(document).ready(function () {
+    $('.my-cards-page .card').click(function () {
+        activeCard(this);
+    });
+
+    function activeCard(elem) {
+        $(elem).siblings('.checkbox-block').find('input').prop("checked", true);
+        $('.my-cards-page .card').removeClass('active');
+        $(elem).addClass('active');
+    }
+
+    $('#cart-modal .banks-grid .item').click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+
+    $('#cart-modal .banks-grid .add-card').click(function () {
+        $
+    });
+});
