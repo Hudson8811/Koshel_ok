@@ -5653,7 +5653,7 @@ this._delay(function(){n===this.counter&&this.refreshPositions(!s)})},_clear:fun
             } else if (hour < 10) {
                 return 'সকাল';
             } else if (hour < 17) {
-                return 'দুপুর';
+                return '��ুপুর';
             } else if (hour < 20) {
                 return 'বিকাল';
             } else {
@@ -6761,7 +6761,7 @@ this._delay(function(){n===this.counter&&this.refreshPositions(!s)})},_clear:fun
             hh : '%d ώρες',
             d : 'μία μέρα',
             dd : '%d μέρες',
-            M : 'ένας μήν��ς',
+            M : 'ένας μήνας',
             MM : '%d μήνες',
             y : 'ένας χρόνος',
             yy : '%d χρόνια'
