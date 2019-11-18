@@ -13,7 +13,11 @@ $(document).ready(function () {
         $(this).addClass('active').siblings().removeClass('active');
     });
 
-    $('#cart-modal .banks-grid .add-card').click(function () {
-        $
+    $('.my-cards-page .add-card').click(function () {
+        $.fancybox.open({
+            src  : '#cart-modal',
+            type : 'inline',
+            modal: true,
+        });
     });
 });
