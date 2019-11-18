@@ -11,10 +11,42 @@
     margin-top: -24px;
     position: relative;
     @include media((
+            padding-top: (768: 278px, 640: 0),
             margin-top: (640: 0),
             margin-left: (640: 0),
             padding-bottom: (640: 144px),
     ));
+    .controls{
+      display: none;
+      @media all and (min-width: 641px) and (max-width: 768px) {
+        display: block;
+        .prev-cards,
+        .next-cards{
+          display: none;
+          position: absolute;
+          height: 198px;
+          width: 20px;
+          top: 0;
+          background: url("../img/arr-r.svg") center center no-repeat;
+          background-size: 16px auto;
+          margin-top: 24px;
+          cursor: pointer;
+          &:hover{
+            background-color: #f3f3f3;
+          }
+          &.active{
+            display: block;
+          }
+        }
+        .prev-cards{
+          left: 0;
+          transform: scaleX(-1);
+        }
+        .next-cards{
+          right: 0;
+        }
+      }
+    }
     .card-item{
       width: 350px;
       margin-left: 30px;
@@ -28,6 +60,45 @@
         @include media((
                 margin-top: (640: -115px),
         ));
+      }
+      &:not(.add-card){
+        @include media((
+                width: (1200: 330px,640: 285px),
+                margin-top: (640: 0),
+                margin-left: (640: 0),
+                position: (768: absolute, 640: relative),
+                top: (768: 0, 640: auto),
+        ));
+        @media all and (min-width: 641px) and (max-width: 768px) {
+          .checkbox-block{
+            max-width: 210px;
+          }
+          &.left{
+            left: 0;
+          }
+
+          &.left-notfirst{
+            left: 42px;
+          }
+
+          &.right{
+            right: 0;
+            .checkbox-block{
+              float: right;
+            }
+          }
+
+          &.right-notlast{
+            right: 42px;
+            .checkbox-block{
+              float: right;
+            }
+          }
+
+          .card.active {
+            box-shadow: 7px 0px 6px rgba(0, 0, 0, 0.11);
+          }
+        }
       }
       .hidden{
         display: none;

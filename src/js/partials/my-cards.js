@@ -44,5 +44,21 @@ $(document).ready(function () {
         });
     }
 
+    var active768 = 1,
+        count768 = $('.my-cards-page .card-item:not(.add-card)').length;
+
+    function slider768(card) {
+        $('.my-cards-page .card-item:not(.add-card)').hide();
+        card.show().addClass('left');
+
+        if (count768 > 2){
+            card.next().show().addClass('right-notlast');
+            $('.next-cards').addClass('active');
+        } else {
+            card.next().show().addClass('right');
+        }
+    }
+
     zindexCard($('.my-cards-page .card-item:not(.add-class):first-child'));
+    slider768($('.my-cards-page .card-item:not(.add-class):first-child'));
 });

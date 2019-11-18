@@ -14533,7 +14533,7 @@ this._delay(function(){n===this.counter&&this.refreshPositions(!s)})},_clear:fun
     //! moment.js locale configuration
 
     hooks.defineLocale('zh-cn', {
-        months : '一月_二月_三月_四月_五月_六月_七月_八月_九月_十月_十一月_十二月'.split('_'),
+        months : '���月_二月_三月_四月_五月_六月_七月_八月_九月_十月_十一月_十二月'.split('_'),
         monthsShort : '1月_2月_3月_4月_5月_6月_7月_8月_9月_10月_11月_12月'.split('_'),
         weekdays : '星期日_星期一_星期二_星期三_星期四_星期五_星期六'.split('_'),
         weekdaysShort : '周日_周一_周二_周三_周四_周五_周六'.split('_'),
@@ -15162,5 +15162,21 @@ $(document).ready(function () {
         });
     }
 
+    var active768 = 1,
+        count768 = $('.my-cards-page .card-item:not(.add-card)').length;
+
+    function slider768(card) {
+        $('.my-cards-page .card-item:not(.add-card)').hide();
+        card.show().addClass('left');
+
+        if (count768 > 2){
+            card.next().show().addClass('right-notlast');
+            $('.next-cards').addClass('active');
+        } else {
+            card.next().show().addClass('right');
+        }
+    }
+
     zindexCard($('.my-cards-page .card-item:not(.add-class):first-child'));
+    slider768($('.my-cards-page .card-item:not(.add-class):first-child'));
 });
