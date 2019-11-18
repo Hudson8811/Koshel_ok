@@ -34,8 +34,8 @@
                                         required><span class="input-label">Фамилия</span>
                                     <div class="hit" title="Подсказка">?</div>
                                 </div>
-                                <div class="input-block  input-block_with-label input-block--error-empty"><input type="text" name=""
-                                        required><span class="input-label">Имя</span>
+                                <div class="input-block  input-block_with-label input-block--error-empty"><input
+                                        type="text" name="" required><span class="input-label">Имя</span>
                                     <div class="hit" title="Подсказка">?</div>
                                 </div>
                             </div>
@@ -292,41 +292,79 @@
                                         операторами</span></label></div>
                             <div class="submit-block incorrect">
                                 <button type="submit" class="btn btn-submit-prof hovco">Сохранить данные</button>
-                                <div class="submit-block__log">Проверьте правильность заполнения всех полей. Ошибок обнаружено: 4</div>
+                                <div class="submit-block__log">Проверьте правильность заполнения всех полей. Ошибок
+                                    обнаружено: 4</div>
                             </div>
                         </div>
                     </form>
                 </div>
-                <div class="profile-info-col">
-                    <div class="profile-info">
-                        <div class="profile-avatar">
+                <div class="profile-info-col" id="pic-fix">
+                    <div class="profile-info-col-wrap">
+                        <div class="profile-info">
+                            <div class="profile-avatar">
+                                <img src="img/avatar.jpg" alt="">
+                            </div>
+                            <div class="profile-name">Игорь Валерич</div>
+                        </div>
+                        <div class="profile-menu">
+                            <a href="#form-section-1" class="active">Личные данные</a>
+                            <a href="#form-section-2">Паспортные данные</a>
+                            <a href="#form-section-3">Дополнительная информация</a>
+                            <a href="#form-section-4">Адрес регистрации \ прописки</a>
+                            <a href="#form-section-5">Общая информация</a>
+                            <a href="#form-section-6">Контактная информация</a>
+                            <a href="#change-pass-popup" data-fancybox>Изменение пароля</a>
+                        </div>
+                        <div class="profile-complete">
+                            <div class="label">Ваша анкета заполнена на:</div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar">
+                                    <div class="complete-bar" style="width: 32%;"></div>
+                                </div>
+                                <div class="progress-bar-value">32%</div>
+                            </div>
+
+
+                            <div class="credit-chance">
+                                <div class="status green">НЕВЫСОКАЯ</div>
+                                <div class="text">Вероятность получения кредита</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-profile-info-col">
+                    <div class="mpic-top">
+                        <div class="mpic-arrow">
+                            <svg width="12" height="9" viewBox="0 0 12 9" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0 0.99707L5.99728 5.86962L11.995 0.997072L11.995 3.13019L5.99728 8.00306L-3.72967e-07 3.13019L0 0.99707Z"
+                                    fill="#E3E4EB" />
+                            </svg>
+                        </div>
+                        <div class="mpic-top__pic">
                             <img src="img/avatar.jpg" alt="">
                         </div>
-                        <div class="profile-name">Игорь Валерич</div>
+
                     </div>
-                    <div class="profile-menu">
-                        <a href="#form-section-1" class="active">Личные данные</a>
-                        <a href="#form-section-2">Паспортные данные</a>
-                        <a href="#form-section-3">Дополнительная информация</a>
-                        <a href="#form-section-4">Адрес регистрации \ прописки</a>
-                        <a href="#form-section-5">Общая информация</a>
-                        <a href="#form-section-6">Контактная информация</a>
-                        <a href="" data-fancybox>Изменение пароля</a>
-                    </div>
-                    <div class="profile-complete">
-                        <div class="label">Ваша анкета заполнена на:</div>
-                        <div class="progress-bar-container">
-                            <div class="progress-bar">
-                                <div class="complete-bar" style="width: 32%;"></div>
+                    <div class="mpic-bottom">
+                        <div class="mpic-user-name">Игорь Валерич</div>
+                        <div class="profile-complete">
+                            <div class="label">Ваша анкета заполнена на:</div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar">
+                                    <div class="complete-bar" style="width: 32%;"></div>
+                                </div>
+                                <div class="progress-bar-value">32%</div>
                             </div>
-                            <div class="progress-bar-value">32%</div>
-                        </div>
 
 
-                        <div class="credit-chance">
-                            <div class="status green">НЕВЫСОКАЯ</div>
-                            <div class="text">Вероятность получения кредита</div>
-                        </div>
+                            <div class="credit-chance">
+                                <div class="status green">НЕВЫСОКАЯ</div>
+                                <div class="text">Вероятность получения кредита</div>
+                            </div>
+                        </div><a href="#change-pass-popup" data-fancybox class="mpic-b-change-pass-ref">Изменение
+                            пароля</a>
                     </div>
                 </div>
             </div>
@@ -335,7 +373,27 @@
     </div>
 
 
-
+    <form action="" class="change-pass-popup" id="change-pass-popup">
+        <div class="change-pass-popup__title">Изменение пароля</div>
+        <div class="change-pass-popup__inputs">
+            <div class="input-row">
+                <div class="input-block"><input type="password" placeholder="Текущий  пароль" name="" required>
+                    <div class="toggle-pass-vis" onclick="togglePassVis(this)"></div>
+                </div>
+            </div>
+            <div class="input-row">
+                <div class="input-block"><input type="password" placeholder="Новый пароль" name="" required>
+                    <div class="toggle-pass-vis" onclick="togglePassVis(this)"></div>
+                </div>
+            </div>
+            <div class="input-row">
+                <div class="input-block"><input type="password" placeholder="Повторите пароль" name="" required>
+                    <div class="toggle-pass-vis" onclick="togglePassVis(this)"></div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-submit-change-pswd hovco">Изменить пароль</button>
+        </div>
+    </form>
     <script src="js/main.js"></script>
 
 

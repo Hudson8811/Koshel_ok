@@ -72,8 +72,8 @@ gulp.task('js:build', function () {
 
 gulp.task('style:build', function () {
 	return gulp.src(path.src.style)
-		.pipe(sourcemaps.init())
 		.pipe(plumber())
+		.pipe(sourcemaps.init())
 		.pipe(sass())
 		.pipe(gcmq())
 		.pipe(autoprefixer({
