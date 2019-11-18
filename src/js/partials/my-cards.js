@@ -1,6 +1,13 @@
 $(document).ready(function () {
     $('.my-cards-page .card').click(function () {
         activeCard(this);
+        if (!$(this).hasClass('verifed')){
+            $.fancybox.open({
+                src  : '#verification-modal',
+                type : 'inline',
+                modal: true,
+            });
+        }
     });
 
     function activeCard(elem) {

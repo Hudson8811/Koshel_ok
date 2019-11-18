@@ -10,7 +10,9 @@
       width: 350px;
       margin-left: 30px;
       margin-top: 24px;
-
+      @include media((
+              width: (1200: 330px),
+      ));
       .hidden{
         display: none;
       }
@@ -27,6 +29,9 @@
         z-index: 1;
         overflow: hidden;
         transition: background 0.3s ease;
+        @include media((
+                height: (1200: 198px),
+        ));
         &::before{
           content: "";
           display: block;
@@ -56,6 +61,11 @@
           position: absolute;
           left: 34px;
           top: 24px;
+
+          @include media((
+                  width: (1200: 63px),
+                  left: (1200: 26px),
+          ));
         }
         .status{
           font-size: 13px;
@@ -66,6 +76,10 @@
           right: 32px;
           top: 38px;
           padding: 0 4px 2px;
+
+          @include media((
+                  right: (1200: 26px),
+          ));
         }
         .number{
           display: flex;
@@ -77,6 +91,11 @@
           position: absolute;
           left: 0;
           top: 100px;
+
+          @include media((
+                  top: (1200: 90px),
+                  padding: (1200: 0 26px),
+          ));
           .secret{
             display: block;
             width: 56px;
@@ -99,6 +118,10 @@
           color: #ffffff;
           top: 149px;
           left: 0;
+          @include media((
+                  top: (1200: 137px),
+                  padding: (1200: 0 26px),
+          ));
           .label{
             font-weight: 300;
             font-size: 8px;
@@ -158,12 +181,22 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      @include media((
+              height: (1200: 198px, 768: 54px),
+              width: (768: 100%),
+              flex-direction: (768: row-reverse),
+      ));
       .circle{
         width: 64px;
         height: 64px;
         background: #BABBC0 url("../img/plus.svg") center center no-repeat;
         background-size: 16px 16px;
         border-radius: 100%;
+        @include media((
+                width: (768: 32px),
+                height: (768: 32px),
+                background-size: (768: 8px 8px),
+        ));
       }
       .text{
         font-weight: 500;
@@ -172,6 +205,10 @@
         color: #94959A;
         text-align: center;
         margin-top: 16px;
+        @include media((
+                margin-top: (768: 198px),
+                margin-right: (768: 24px),
+        ));
       }
       &:hover{
         .circle{
@@ -229,23 +266,30 @@
     color: $green;
     height: 84px;
     background: #F1F2F7;
-    box-sizing: content-box;
+    box-sizing: border-box;
+    padding: 0 72px;
+    max-width: 715px;
+    width: 100%;
+    @include media((
+            padding: (1200: 0 50,768: 0 45px,640:0 30px),
+    ));
     span{
-      padding: 0 72px;
       display: block;
-      width: 571px;
-      max-width: 100%;
+      width: 100%;
       margin: 0 auto;
     }
   }
   .modal-form{
     padding: 0 72px;
-    width: 571px;
-    max-width: 100%;
+    max-width: 715px;
+    width: 100%;
     margin: 0 auto;
     margin-top: 40px;
     padding-bottom: 64px;
-    box-sizing: content-box;
+    box-sizing: border-box;
+    @include media((
+            padding: (1200: 0 50,768: 0 45px,640:0 30px),
+    ));
     .modal-form-block{
       margin-bottom: 40px;
       &__title{
@@ -303,6 +347,9 @@
     .card-block{
       position: relative;
       height: 234px;
+      @include media((
+              height: (768: 306px),
+      ));
       .card{
         user-select: none;
         cursor: pointer;
@@ -404,6 +451,10 @@
           z-index: 1;
           right: 0;
           bottom: 0;
+          @include media((
+                  right: (768: auto),
+                  left: (768: 0),
+          ));
           .csv-row{
             width: 100%;
             background: #D1D4E2;
@@ -412,6 +463,9 @@
             display: flex;
             justify-content: flex-end;
             margin-top: 32px;
+            @include media((
+                    margin-top: (768: 133px),
+            ));
             .input-block{
               width: 91px;
               input{

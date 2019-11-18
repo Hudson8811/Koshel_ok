@@ -26,6 +26,18 @@ body {
 	margin: 0 auto;
 }
 
+.container2 {
+	box-sizing: content-box;
+	width: 1110px;
+	max-width: 100%;
+	margin: 0 auto 0 7.55vw;
+	@include media((
+		margin: (1200: 0 auto),
+		width: (1200: 700px, 768: 520px),
+		padding: (1200: 0 30px),
+	));
+}
+
 img {
 	max-width: 100%;
 	height: auto;
