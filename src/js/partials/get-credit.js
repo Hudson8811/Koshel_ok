@@ -32,7 +32,7 @@ $(document).ready(function () {
             nextArrow: '<div class="my-achievements-slider-arrow mas-arrow-next"><svg width="13" height="25" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 24.5L9.90529 12.5005L-1.04907e-06 0.5L3.09406 0.5L13 12.5005L3.09406 24.5L0 24.5Z" fill="#BABBC0"/></svg></div>',
             responsive: [
                 {
-                    breakpoint: 1440,
+                    breakpoint: 1500,
                     settings: {
                         slidesToShow: 3,
                         slidesToScroll: 1,
@@ -129,14 +129,14 @@ $(document).ready(function () {
 
 adaptGC = function () {
     if (ready_gc) {
-        if (window.innerWidth > 1440 && radInAchivements[0].indOption.radius != 84) {
+        if (window.innerWidth > 1500 && radInAchivements[0].indOption.radius != 84) {
 
             radInAchivements.forEach(function (value, index) {
                 value.option('barWidth', 12);
                 value.option('radius', 84);
             });
         }
-        if (window.innerWidth <= 1440 && window.innerWidth > 639 && radInAchivements[0].indOption.radius != 52) {
+        if (window.innerWidth <= 1500 && window.innerWidth > 639 && radInAchivements[0].indOption.radius != 52) {
             /*console.log(radInAchivements[0].indOption.barWidth);
             console.log(radInAchivements[0].indOption.radius);*/
 

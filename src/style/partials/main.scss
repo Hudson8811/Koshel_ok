@@ -269,8 +269,7 @@ img {
 .container {
 	box-sizing: content-box;
 	width: 1110px;
-	margin: 0 auto;
-	padding-right: 269px;
+	margin: 0 auto 0 7.55vw;
 
 	&.flex-row {
 		align-items: flex-start;
@@ -427,9 +426,15 @@ img {
 	}
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1625px) {
 	.container {
-		width: 767px;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 1500px) {
+	.container {
+		width:690px;
 		padding-right: 47px;
 		padding-left: 30px;
 	}
@@ -439,16 +444,22 @@ img {
 	}
 }
 
+
+@media screen and (max-width: 1040px) {
+	.container {
+		padding: 0;
+	}
+}
+
 @media screen and (max-width: 1023px) {
 	.container {
-		padding: 0 39px;
+		margin: 0 auto;
 	}
 }
 
 @media screen and (max-width: 767px) {
 	.container {
-		width: 640px;
-		padding: 0 65px;
+		width: 510px;
 	}
 }
 
@@ -456,6 +467,15 @@ img {
 	.container {
 		width: 100%;
 		max-width: calc(100% - 45px * 2);
+		padding: 0;
+	}
+}
+
+@media screen and (max-width: 385px) {
+
+	.container {
+		width: 100%;
+		max-width: calc(100% - 15px * 2);
 		padding: 0;
 	}
 }

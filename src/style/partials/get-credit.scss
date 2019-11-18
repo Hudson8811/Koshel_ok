@@ -114,6 +114,7 @@
 
     .ui-state-default,
     .ui-widget-content .ui-state-default {
+        margin-left: -17px;
         top: -7px;
         box-sizing: border-box;
         width: 35px;
@@ -512,7 +513,7 @@
     }
 
     .cra-results-item {
-        width: 50%;
+        width: calc(50% - 7.5px);
 
         &:not(:nth-child(1)):not(:nth-child(2)) {
             margin-top: 28px;
@@ -558,7 +559,19 @@
     .mas-arrow-prev {
         left: -26px;
     }
+
     .mas-arrow-next {
         right: -26px;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .credit-registration-sliders {
+        margin-right: 7px;
+        margin-left: 7px;
+    }
+
+    .cra-results-item__val {
+        font-size: 18px;
     }
 }

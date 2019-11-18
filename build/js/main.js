@@ -8408,7 +8408,7 @@ this._delay(function(){n===this.counter&&this.refreshPositions(!s)})},_clear:fun
         months: 'જાન્યુઆરી_ફેબ્રુઆરી_માર્ચ_એપ્રિલ_મે_જૂન_જુલાઈ_ઑગસ્ટ_સપ્ટેમ્બર_ઑક્ટ્બર_નવેમ્બર_ડિસેમ્બર'.split('_'),
         monthsShort: 'જાન્યુ._ફેબ્રુ._માર્ચ_એપ્રિ._મે_જૂન_જુલા._ઑગ._સપ્ટે._ઑક્ટ્._નવે._ડિસે.'.split('_'),
         monthsParseExact: true,
-        weekdays: 'રવિવાર_સોમવાર_મંગળવાર_બુધ્વાર_ગુરુવાર_શુક્રવાર_શનિવાર'.split('_'),
+        weekdays: 'રવિવાર_સોમવાર_મંગળવાર_બુધ્વાર_ગુર���વાર_શુક્રવાર_શનિવાર'.split('_'),
         weekdaysShort: 'રવિ_સોમ_મંગળ_બુધ્_ગુરુ_શુક્ર_શનિ'.split('_'),
         weekdaysMin: 'ર_સો_મં_બુ_ગુ_શુ_શ'.split('_'),
         longDateFormat: {
@@ -10912,7 +10912,7 @@ this._delay(function(){n===this.counter&&this.refreshPositions(!s)})},_clear:fun
         monthsShort: 'जाने._फेब्रु._मार्च._एप्रि._मे._जून._जुलै._ऑग._सप्टें._ऑक्टो._नोव्हें._डिसें.'.split('_'),
         monthsParseExact : true,
         weekdays : 'रविवार_सोमवार_मंगळवार_बुधवार_गुरूवार_शुक्रवार_शनिवार'.split('_'),
-        weekdaysShort : '���वि_सोम_मंगळ_बुध_गुरू_शुक्र_शनि'.split('_'),
+        weekdaysShort : 'रवि_सोम_मंगळ_बुध_गुरू_शुक्र_शनि'.split('_'),
         weekdaysMin : 'र_सो_मं_बु_गु_शु_श'.split('_'),
         longDateFormat : {
             LT : 'A h:mm वाजता',
@@ -14914,7 +14914,7 @@ $(document).ready(function () {
             nextArrow: '<div class="my-achievements-slider-arrow mas-arrow-next"><svg width="13" height="25" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 24.5L9.90529 12.5005L-1.04907e-06 0.5L3.09406 0.5L13 12.5005L3.09406 24.5L0 24.5Z" fill="#BABBC0"/></svg></div>',
             responsive: [
                 {
-                    breakpoint: 1440,
+                    breakpoint: 1500,
                     settings: {
                         slidesToShow: 3,
                         slidesToScroll: 1,
@@ -15011,14 +15011,14 @@ $(document).ready(function () {
 
 adaptGC = function () {
     if (ready_gc) {
-        if (window.innerWidth > 1440 && radInAchivements[0].indOption.radius != 84) {
+        if (window.innerWidth > 1500 && radInAchivements[0].indOption.radius != 84) {
 
             radInAchivements.forEach(function (value, index) {
                 value.option('barWidth', 12);
                 value.option('radius', 84);
             });
         }
-        if (window.innerWidth <= 1440 && window.innerWidth > 639 && radInAchivements[0].indOption.radius != 52) {
+        if (window.innerWidth <= 1500 && window.innerWidth > 639 && radInAchivements[0].indOption.radius != 52) {
             /*console.log(radInAchivements[0].indOption.barWidth);
             console.log(radInAchivements[0].indOption.radius);*/
 
