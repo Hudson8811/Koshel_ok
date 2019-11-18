@@ -14533,7 +14533,7 @@ this._delay(function(){n===this.counter&&this.refreshPositions(!s)})},_clear:fun
     //! moment.js locale configuration
 
     hooks.defineLocale('zh-cn', {
-        months : '���月_二月_三月_四月_五月_六月_七月_八月_九月_十月_十一月_十二月'.split('_'),
+        months : '一月_二月_三月_四月_五月_六月_七月_八月_九月_十月_十一月_十二月'.split('_'),
         monthsShort : '1月_2月_3月_4月_5月_6月_7月_8月_9月_10月_11月_12月'.split('_'),
         weekdays : '星期日_星期一_星期二_星期三_星期四_星期五_星期六'.split('_'),
         weekdaysShort : '周日_周一_周二_周三_周四_周五_周六'.split('_'),
@@ -15136,6 +15136,13 @@ $(document).ready(function () {
         zindexCard(parent);
     }
 
+    $('.my-cards-page .card-item input[type=radio]').change(function() {
+        $('.my-cards-page .card').removeClass('active');
+        var parent = $(this).parents('.card-item');
+        parent.find('.card').addClass('active');
+        zindexCard(parent);
+    });
+
     $('#cart-modal .banks-grid .item').click(function () {
         $(this).addClass('active').siblings().removeClass('active');
     });
@@ -15176,6 +15183,34 @@ $(document).ready(function () {
             card.next().show().addClass('right');
         }
     }
+
+    $('.next-cards').click(function () {
+        active768++;
+        $('.my-cards-page .card-item:not(.add-card)').hide().removeClass('left-notfirst left right right-notlast');
+        $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').show().addClass('left-notfirs');
+        $('.prev-cards').addClass('active');
+        if (active768 === count768 - 1){
+            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').next().show().addClass('right');
+            $('.next-cards').removeClass('active');
+        } else {
+            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').next().show().addClass('right-notlast');
+        }
+    });
+
+    $('.prev-cards').click(function () {
+        active768--;
+        $('.my-cards-page .card-item:not(.add-card)').hide().removeClass('left-notfirst left right right-notlast');
+        $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').next().show().addClass('right-notlast');
+        $('.next-cards').addClass('active');
+
+        if (active768 === 1){
+            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').show().addClass('left');
+            $('.prev-cards').removeClass('active');
+        } else {
+            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').show().addClass('left-notfirs');
+        }
+    });
+
 
     zindexCard($('.my-cards-page .card-item:not(.add-class):first-child'));
     slider768($('.my-cards-page .card-item:not(.add-class):first-child'));

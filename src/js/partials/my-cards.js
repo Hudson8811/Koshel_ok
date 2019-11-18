@@ -18,6 +18,13 @@ $(document).ready(function () {
         zindexCard(parent);
     }
 
+    $('.my-cards-page .card-item input[type=radio]').change(function() {
+        $('.my-cards-page .card').removeClass('active');
+        var parent = $(this).parents('.card-item');
+        parent.find('.card').addClass('active');
+        zindexCard(parent);
+    });
+
     $('#cart-modal .banks-grid .item').click(function () {
         $(this).addClass('active').siblings().removeClass('active');
     });
@@ -58,6 +65,34 @@ $(document).ready(function () {
             card.next().show().addClass('right');
         }
     }
+
+    $('.next-cards').click(function () {
+        active768++;
+        $('.my-cards-page .card-item:not(.add-card)').hide().removeClass('left-notfirst left right right-notlast');
+        $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').show().addClass('left-notfirs');
+        $('.prev-cards').addClass('active');
+        if (active768 === count768 - 1){
+            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').next().show().addClass('right');
+            $('.next-cards').removeClass('active');
+        } else {
+            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').next().show().addClass('right-notlast');
+        }
+    });
+
+    $('.prev-cards').click(function () {
+        active768--;
+        $('.my-cards-page .card-item:not(.add-card)').hide().removeClass('left-notfirst left right right-notlast');
+        $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').next().show().addClass('right-notlast');
+        $('.next-cards').addClass('active');
+
+        if (active768 === 1){
+            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').show().addClass('left');
+            $('.prev-cards').removeClass('active');
+        } else {
+            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').show().addClass('left-notfirs');
+        }
+    });
+
 
     zindexCard($('.my-cards-page .card-item:not(.add-class):first-child'));
     slider768($('.my-cards-page .card-item:not(.add-class):first-child'));
