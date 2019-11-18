@@ -5653,7 +5653,7 @@ this._delay(function(){n===this.counter&&this.refreshPositions(!s)})},_clear:fun
             } else if (hour < 10) {
                 return 'সকাল';
             } else if (hour < 17) {
-                return '��ুপুর';
+                return 'দুপুর';
             } else if (hour < 20) {
                 return 'বিকাল';
             } else {
@@ -15173,41 +15173,41 @@ $(document).ready(function () {
         count768 = $('.my-cards-page .card-item:not(.add-card)').length;
 
     function slider768(card) {
-        $('.my-cards-page .card-item:not(.add-card)').hide();
+        $('.my-cards-page .card-item:not(.add-card)').addClass('hidden');
         card.show().addClass('left');
 
         if (count768 > 2){
-            card.next().show().addClass('right-notlast');
+            card.next().show().addClass('right-notlast').removeClass('hidden');
             $('.next-cards').addClass('active');
         } else {
-            card.next().show().addClass('right');
+            card.next().show().addClass('right').removeClass('hidden');
         }
     }
 
     $('.next-cards').click(function () {
         active768++;
-        $('.my-cards-page .card-item:not(.add-card)').hide().removeClass('left-notfirst left right right-notlast');
-        $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').show().addClass('left-notfirs');
+        $('.my-cards-page .card-item:not(.add-card)').addClass('hidden').removeClass('left-notfirst left right right-notlast');
+        $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').show().addClass('left-notfirs').removeClass('hidden');
         $('.prev-cards').addClass('active');
         if (active768 === count768 - 1){
-            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').next().show().addClass('right');
+            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').next().show().addClass('right').removeClass('hidden');
             $('.next-cards').removeClass('active');
         } else {
-            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').next().show().addClass('right-notlast');
+            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').next().show().addClass('right-notlast').removeClass('hidden');
         }
     });
 
     $('.prev-cards').click(function () {
         active768--;
-        $('.my-cards-page .card-item:not(.add-card)').hide().removeClass('left-notfirst left right right-notlast');
-        $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').next().show().addClass('right-notlast');
+        $('.my-cards-page .card-item:not(.add-card)').addClass('hidden').removeClass('left-notfirst left right right-notlast');
+        $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').next().show().addClass('right-notlast').removeClass('hidden');
         $('.next-cards').addClass('active');
 
         if (active768 === 1){
-            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').show().addClass('left');
+            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').show().addClass('left').removeClass('hidden');
             $('.prev-cards').removeClass('active');
         } else {
-            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').show().addClass('left-notfirs');
+            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').show().addClass('left-notfirs').removeClass('hidden');
         }
     });
 

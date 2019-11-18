@@ -4,6 +4,7 @@
   @include media((
           margin-top: (1024: 100px),
   ));
+
   .my-cards-grid{
     display: flex;
     flex-wrap: wrap;
@@ -70,6 +71,9 @@
                 top: (768: 0, 640: auto),
         ));
         @media all and (min-width: 641px) and (max-width: 768px) {
+          &.hidden{
+            display: none;
+          }
           .checkbox-block{
             max-width: 210px;
             margin-top:  14px;
@@ -100,9 +104,6 @@
             box-shadow: 7px 0px 6px rgba(0, 0, 0, 0.11);
           }
         }
-      }
-      .hidden{
-        display: none;
       }
       .card{
         user-select: none;
