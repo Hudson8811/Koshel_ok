@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.my-cards-page .card').click(function () {
+    $('.my-cards-page .my-cards-grid .card').click(function () {
         activeCard(this);
         if (!$(this).hasClass('verifed')){
             $.fancybox.open({
@@ -56,40 +56,40 @@ $(document).ready(function () {
 
     function slider768(card) {
         $('.my-cards-page .card-item:not(.add-card)').addClass('hidden');
-        card.show().addClass('left');
+        card.removeClass('hidden').addClass('left');
 
         if (count768 > 2){
-            card.next().show().addClass('right-notlast').removeClass('hidden');
+            card.next().addClass('right-notlast').removeClass('hidden');
             $('.next-cards').addClass('active');
         } else {
-            card.next().show().addClass('right').removeClass('hidden');
+            card.next().addClass('right').removeClass('hidden');
         }
     }
 
     $('.next-cards').click(function () {
         active768++;
         $('.my-cards-page .card-item:not(.add-card)').addClass('hidden').removeClass('left-notfirst left right right-notlast');
-        $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').show().addClass('left-notfirs').removeClass('hidden');
+        $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').addClass('left-notfirs').removeClass('hidden');
         $('.prev-cards').addClass('active');
         if (active768 === count768 - 1){
-            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').next().show().addClass('right').removeClass('hidden');
+            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').next().addClass('right').removeClass('hidden');
             $('.next-cards').removeClass('active');
         } else {
-            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').next().show().addClass('right-notlast').removeClass('hidden');
+            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').next().addClass('right-notlast').removeClass('hidden');
         }
     });
 
     $('.prev-cards').click(function () {
         active768--;
         $('.my-cards-page .card-item:not(.add-card)').addClass('hidden').removeClass('left-notfirst left right right-notlast');
-        $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').next().show().addClass('right-notlast').removeClass('hidden');
+        $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').next().addClass('right-notlast').removeClass('hidden');
         $('.next-cards').addClass('active');
 
         if (active768 === 1){
-            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').show().addClass('left').removeClass('hidden');
+            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').addClass('left').removeClass('hidden');
             $('.prev-cards').removeClass('active');
         } else {
-            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').show().addClass('left-notfirs').removeClass('hidden');
+            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').addClass('left-notfirs').removeClass('hidden');
         }
     });
 

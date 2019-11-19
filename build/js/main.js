@@ -10242,7 +10242,7 @@ this._delay(function(){n===this.counter&&this.refreshPositions(!s)})},_clear:fun
             future : 'ອີກ %s',
             past : '%sຜ່ານມາ',
             s : 'ບໍ່ເທົ່າໃດວິນາທີ',
-            ss : '%d ວິນ��ທີ' ,
+            ss : '%d ວິນາທີ' ,
             m : '1 ນາທີ',
             mm : '%d ນາທີ',
             h : '1 ຊົ່ວໂມງ',
@@ -13388,7 +13388,7 @@ this._delay(function(){n===this.counter&&this.refreshPositions(!s)})},_clear:fun
     };
 
     hooks.defineLocale('tg', {
-        months : 'январ_феврал_март_апрел_май_ию��_июл_август_сентябр_октябр_ноябр_декабр'.split('_'),
+        months : 'январ_феврал_март_апрел_май_июн_июл_август_сентябр_октябр_ноябр_декабр'.split('_'),
         monthsShort : 'янв_фев_мар_апр_май_июн_июл_авг_сен_окт_ноя_дек'.split('_'),
         weekdays : 'якшанбе_душанбе_сешанбе_чоршанбе_панҷшанбе_ҷумъа_шанбе'.split('_'),
         weekdaysShort : 'яшб_дшб_сшб_чшб_пшб_ҷум_шнб'.split('_'),
@@ -15159,7 +15159,7 @@ adaptGC = function () {
     }
 }
 $(document).ready(function () {
-    $('.my-cards-page .card').click(function () {
+    $('.my-cards-page .my-cards-grid .card').click(function () {
         activeCard(this);
         if (!$(this).hasClass('verifed')){
             $.fancybox.open({
@@ -15216,40 +15216,40 @@ $(document).ready(function () {
 
     function slider768(card) {
         $('.my-cards-page .card-item:not(.add-card)').addClass('hidden');
-        card.show().addClass('left');
+        card.removeClass('hidden').addClass('left');
 
         if (count768 > 2){
-            card.next().show().addClass('right-notlast').removeClass('hidden');
+            card.next().addClass('right-notlast').removeClass('hidden');
             $('.next-cards').addClass('active');
         } else {
-            card.next().show().addClass('right').removeClass('hidden');
+            card.next().addClass('right').removeClass('hidden');
         }
     }
 
     $('.next-cards').click(function () {
         active768++;
         $('.my-cards-page .card-item:not(.add-card)').addClass('hidden').removeClass('left-notfirst left right right-notlast');
-        $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').show().addClass('left-notfirs').removeClass('hidden');
+        $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').addClass('left-notfirs').removeClass('hidden');
         $('.prev-cards').addClass('active');
         if (active768 === count768 - 1){
-            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').next().show().addClass('right').removeClass('hidden');
+            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').next().addClass('right').removeClass('hidden');
             $('.next-cards').removeClass('active');
         } else {
-            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').next().show().addClass('right-notlast').removeClass('hidden');
+            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').next().addClass('right-notlast').removeClass('hidden');
         }
     });
 
     $('.prev-cards').click(function () {
         active768--;
         $('.my-cards-page .card-item:not(.add-card)').addClass('hidden').removeClass('left-notfirst left right right-notlast');
-        $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').next().show().addClass('right-notlast').removeClass('hidden');
+        $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').next().addClass('right-notlast').removeClass('hidden');
         $('.next-cards').addClass('active');
 
         if (active768 === 1){
-            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').show().addClass('left').removeClass('hidden');
+            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').addClass('left').removeClass('hidden');
             $('.prev-cards').removeClass('active');
         } else {
-            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').show().addClass('left-notfirs').removeClass('hidden');
+            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').addClass('left-notfirs').removeClass('hidden');
         }
     });
 

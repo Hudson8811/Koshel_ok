@@ -84,6 +84,10 @@ img {
 	}
 }
 
+.ui-front{
+	z-index: 999999;
+}
+
 .section-title {
 	margin-bottom: 32px;
 	text-transform: uppercase;
@@ -157,9 +161,6 @@ img {
 			color: #94959A;
 			font-size: 15px;
 			line-height: 18px;
-			.ui-selectmenu-text {
-				max-width: calc(100% - 80px - 20px);
-			}
 		}
 
 		.ui-icon-triangle-1-s {

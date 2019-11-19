@@ -67,7 +67,7 @@
                 width: (1200: 330px,640: 285px),
                 margin-top: (640: 0),
                 margin-left: (640: 0),
-                position: (768: absolute, 640: relative),
+                position: (768: absolute, 640: static),
                 top: (768: 0, 640: auto),
         ));
         @media all and (min-width: 641px) and (max-width: 768px) {
@@ -678,7 +678,7 @@
       justify-content: space-between;
       margin-top: 64px;
       @include media((
-              margin: (768: 48px),
+              margin-top: (768: 48px),
       ));
       .verifed-block{
         display: flex;
