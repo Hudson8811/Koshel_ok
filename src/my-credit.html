@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Тайтл</title>
+
+    <link rel="icon" href="favicon.ico">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <div class="wrapper my-credit-page">
+        //= template/sidebar.html
+
+
+        <div class="main">
+            <div class="container">
+                <div class="mcp-adaptive-tab-controls">
+                    <div class="mcp-at-control active" data-tab-id="mc-tab-1">Мои текущие Кредиты</div>
+                    <div class="mcp-at-control" data-tab-id="mc-tab-2">кредитная история</div>
+                </div>
+                <div class="my-credits-page-tabs  flex-row">
+                    <div id="mc-tab-1" class="my-credits active">
+                        <div class="mc-tab-name">Мои текущие Кредиты</div>
+
+
+                        <div class="mc-credit">
+                            <div class="mc-credit-header">
+                                <div class="mc-credit-header__number"><span>Договор</span> # 169881-2019</div>
+                                <div class="mc-credit-header__status">АКТИВНЫЙ</div>
+                            </div>
+                            <div class="mc-credit-info">
+                                <div class="mc-credit-info__for-close">Для закрытия кредита <br class="max-767">Вы
+                                    должны заплатить:
+                                    <span>584 грн.</span></div>
+                                <div class="mc-credit-info__slider">
+                                    <div class="gc-slider__slider-range" data-val='420' data-min='0' data-max='584'
+                                        data-after=' грн.' data-display-type="tooltip">
+
+                                        <div class="ui-slider-handle">
+                                            <div class="ui-slider-handle-tooltip">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mcis-edges">
+                                        <div class="mcis-edges__min">0 грн. </div>
+                                        <div class="mcis-edges__max">584 грн.</div>
+                                    </div>
+                                </div>
+                                <div class="mc-ci-parameters">
+                                    <div class="mc-ci-parameters__item">
+                                        Ваш займ: <span>500 грн.</span>
+                                    </div>
+                                    <div class="mc-ci-parameters__item">
+                                        Проценты: <span>54 грн. </span>
+                                    </div>
+                                    <div class="mc-ci-parameters__item">
+                                        Дата возврата: <span>10.12.2019 </span>
+                                    </div>
+                                </div>
+                                <div class="mc-credit-bottom">
+                                    <div class="mc-credit-bottom__summ">К возврату:<span> 584 грн.</span></div>
+                                    <div class="btn hovco">Погасить кредит</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="mc-credit mc-credit--expired">
+                            <div class="mc-credit-header">
+                                <div class="mc-credit-header__number"><span>Договор</span> # 169881-2019</div>
+                                <div class="mc-credit-header__status">ПРОСРОЧЕН (на 3 дня)</div>
+                            </div>
+                            <div class="mc-credit-info">
+                                <div class="mc-credit-info__for-close">Для закрытия кредита <br class="max-767">Вы
+                                    должны заплатить:
+                                    <span>584 грн.</span></div>
+                                <div class="mc-credit-info__slider">
+                                    <div class="gc-slider__slider-range" data-val='420' data-min='0' data-max='584'
+                                        data-after=' грн.' data-display-type="tooltip">
+
+                                        <div class="ui-slider-handle">
+                                            <div class="ui-slider-handle-tooltip">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mcis-edges">
+                                        <div class="mcis-edges__min">0 грн. </div>
+                                        <div class="mcis-edges__max">584 грн.</div>
+                                    </div>
+                                </div>
+                                <div class="mc-ci-parameters">
+                                    <div class="mc-ci-parameters__item">
+                                        Ваш займ: <span>500 грн.</span>
+                                    </div>
+                                    <div class="mc-ci-parameters__item">
+                                        Проценты: <span>54 грн. </span>
+                                    </div>
+                                    <div class="mc-ci-parameters__item">
+                                        Дата возврата: <span>10.12.2019 </span>
+                                    </div>
+                                </div>
+                                <div class="mc-credit-bottom">
+                                    <div class="mc-credit-bottom__summ">К возврату:<span> 584 грн.</span></div>
+                                    <div class="btn hovco">Погасить кредит</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="mc-credit mc-non-credit">
+                            <div class="mc-non-credit-message">
+                                <div class="mc-non-credit-message__title">Уважаемый Игорь, у Вас нет кредитов.</div>
+                                <div class="mc-non-credit-message__info">Если вам нужны деньги, вы можете оформить
+                                    кредит прямо сейчас. Подайте заявку и через 5 минут средства будут на вашей карте.
+                                </div>
+                                <div class="mc-non-credit-message__available">Доступно: <span>7000 грн.</span></div>
+                            </div>
+                            <div class="btn mc-non-credit-btn">Подобрать кредит</div>
+                        </div>
+                    </div>
+                    <div id="mc-tab-2" class="my-credit-history">
+                        <div class="mc-tab-name">Кредитная история</div>
+                        <div class="history-accordions">
+                                <div class="history-accordions__head">
+                                        <div class="history-accordions-h-wrap">
+                                            <div class="hi-ac-h-number"># 169881-2019 </div>
+                                            <div class="hi-ac-h-status">Закрыт</div>
+                                            <div class="hi-ac-h-arrow"><svg width="12" height="7" viewBox="0 0 12 7" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M0.5 0.5L5.99979 5.07167L11.5 0.5V1.92803L5.99979 6.5L0.5 1.92803L0.5 0.5Z"
+                                                        fill="#0C3362" />
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="history-accordions__info">
+                                            <div class="history-accordions__info--hidden-title ">
+                                                <div class="hi-ac-i-item">Дата выдачи</div>
+                                                <div class="hi-ac-i-item">Сумма займа</div>
+                                                <div class="hi-ac-i-item">Срок</div>
+                                                <div class="hi-ac-i-item">Дата возврата</div>
+                                                <div class="hi-ac-i-item">Оплачено</div>
+                                            </div>
+                                        <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Дата выдачи:</span>
+                                            <span class="bold">21.08.2019</span></div>
+                                        <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Сумма займа:</span>
+                                            <span class="bold">500 грн.</span></div>
+                                        <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Оплачено: </span>
+                                            <span class="bold">500 грн.</span></div>
+                                        <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Срок: </span>
+                                            <span class="bold">3
+                                                дня</span></div>
+                                        <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Фактический cрок:</span>
+                                            <span class="bold">23 дня</span></div>
+                                        <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Дата возврата:</span>
+                                            <span class="bold">08.09.2019</span></div>
+                                        <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Статус: </span>
+                                            <span class="bold green">Закрыт</span></div>
+                                    </div>
+                                    <div class="history-accordions__head">
+                                        <div class="history-accordions-h-wrap">
+                                            <div class="hi-ac-h-number"># 169881-2019 </div>
+                                            <div class="hi-ac-h-status hi-ac-h-status--rejected">Отклонен</div>
+                                            <div class="hi-ac-h-arrow"><svg width="12" height="7" viewBox="0 0 12 7" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M0.5 0.5L5.99979 5.07167L11.5 0.5V1.92803L5.99979 6.5L0.5 1.92803L0.5 0.5Z"
+                                                        fill="#0C3362" />
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="history-accordions__info">
+                                            <div class="history-accordions__info--hidden-title ">
+                                                <div class="hi-ac-i-item">Дата выдачи</div>
+                                                <div class="hi-ac-i-item">Сумма займа</div>
+                                                <div class="hi-ac-i-item">Срок</div>
+                                                <div class="hi-ac-i-item">Дата возврата</div>
+                                                <div class="hi-ac-i-item">Оплачено</div>
+                                            </div>
+                                        <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Дата выдачи:</span>
+                                            <span class="bold">21.08.2019</span></div>
+                                        <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Сумма займа:</span>
+                                            <span class="bold">500 грн.</span></div>
+                                        <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Оплачено: </span>
+                                            <span class="bold">500 грн.</span></div>
+                                        <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Срок: </span>
+                                            <span class="bold">3
+                                                дня</span></div>
+                                        <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Фактический cрок:</span>
+                                            <span class="bold">23 дня</span></div>
+                                        <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Дата возврата:</span>
+                                            <span class="bold">08.09.2019</span></div>
+                                        <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Статус: </span>
+                                            <span class="bold green">Закрыт</span></div>
+                                    </div>
+                                    <div class="history-accordions__head">
+                                            <div class="history-accordions-h-wrap">
+                                                <div class="hi-ac-h-number"># 169881-2019 </div>
+                                                <div class="hi-ac-h-status">Закрыт</div>
+                                                <div class="hi-ac-h-arrow"><svg width="12" height="7" viewBox="0 0 12 7" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M0.5 0.5L5.99979 5.07167L11.5 0.5V1.92803L5.99979 6.5L0.5 1.92803L0.5 0.5Z"
+                                                            fill="#0C3362" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="history-accordions__info">
+                                                <div class="history-accordions__info--hidden-title ">
+                                                    <div class="hi-ac-i-item">Дата выдачи</div>
+                                                    <div class="hi-ac-i-item">Сумма займа</div>
+                                                    <div class="hi-ac-i-item">Срок</div>
+                                                    <div class="hi-ac-i-item">Дата возврата</div>
+                                                    <div class="hi-ac-i-item">Оплачено</div>
+                                                </div>
+                                            <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Дата выдачи:</span>
+                                                <span class="bold">21.08.2019</span></div>
+                                            <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Сумма займа:</span>
+                                                <span class="bold">500 грн.</span></div>
+                                            <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Оплачено: </span>
+                                                <span class="bold">500 грн.</span></div>
+                                            <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Срок: </span>
+                                                <span class="bold">3
+                                                    дня</span></div>
+                                            <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Фактический cрок:</span>
+                                                <span class="bold">23 дня</span></div>
+                                            <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Дата возврата:</span>
+                                                <span class="bold">08.09.2019</span></div>
+                                            <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Статус: </span>
+                                                <span class="bold green">Закрыт</span></div>
+                                        </div>
+                                        <div class="history-accordions__head">
+                                            <div class="history-accordions-h-wrap">
+                                                <div class="hi-ac-h-number"># 169881-2019 </div>
+                                                <div class="hi-ac-h-status hi-ac-h-status--rejected">Отклонен</div>
+                                                <div class="hi-ac-h-arrow"><svg width="12" height="7" viewBox="0 0 12 7" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M0.5 0.5L5.99979 5.07167L11.5 0.5V1.92803L5.99979 6.5L0.5 1.92803L0.5 0.5Z"
+                                                            fill="#0C3362" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="history-accordions__info">
+                                                <div class="history-accordions__info--hidden-title ">
+                                                    <div class="hi-ac-i-item">Дата выдачи</div>
+                                                    <div class="hi-ac-i-item">Сумма займа</div>
+                                                    <div class="hi-ac-i-item">Срок</div>
+                                                    <div class="hi-ac-i-item">Дата возврата</div>
+                                                    <div class="hi-ac-i-item">Оплачено</div>
+                                                </div>
+                                            <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Дата выдачи:</span>
+                                                <span class="bold">21.08.2019</span></div>
+                                            <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Сумма займа:</span>
+                                                <span class="bold">500 грн.</span></div>
+                                            <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Оплачено: </span>
+                                                <span class="bold">500 грн.</span></div>
+                                            <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Срок: </span>
+                                                <span class="bold">3
+                                                    дня</span></div>
+                                            <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Фактический cрок:</span>
+                                                <span class="bold">23 дня</span></div>
+                                            <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Дата возврата:</span>
+                                                <span class="bold">08.09.2019</span></div>
+                                            <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Статус: </span>
+                                                <span class="bold green">Закрыт</span></div>
+                                        </div>
+                                        <div class="history-accordions__head">
+                                                <div class="history-accordions-h-wrap">
+                                                    <div class="hi-ac-h-number"># 169881-2019 </div>
+                                                    <div class="hi-ac-h-status">Закрыт</div>
+                                                    <div class="hi-ac-h-arrow"><svg width="12" height="7" viewBox="0 0 12 7" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M0.5 0.5L5.99979 5.07167L11.5 0.5V1.92803L5.99979 6.5L0.5 1.92803L0.5 0.5Z"
+                                                                fill="#0C3362" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="history-accordions__info">
+                                                    <div class="history-accordions__info--hidden-title ">
+                                                        <div class="hi-ac-i-item">Дата выдачи</div>
+                                                        <div class="hi-ac-i-item">Сумма займа</div>
+                                                        <div class="hi-ac-i-item">Срок</div>
+                                                        <div class="hi-ac-i-item">Дата возврата</div>
+                                                        <div class="hi-ac-i-item">Оплачено</div>
+                                                    </div>
+                                                <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Дата выдачи:</span>
+                                                    <span class="bold">21.08.2019</span></div>
+                                                <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Сумма займа:</span>
+                                                    <span class="bold">500 грн.</span></div>
+                                                <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Оплачено: </span>
+                                                    <span class="bold">500 грн.</span></div>
+                                                <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Срок: </span>
+                                                    <span class="bold">3
+                                                        дня</span></div>
+                                                <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Фактический cрок:</span>
+                                                    <span class="bold">23 дня</span></div>
+                                                <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Дата возврата:</span>
+                                                    <span class="bold">08.09.2019</span></div>
+                                                <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Статус: </span>
+                                                    <span class="bold green">Закрыт</span></div>
+                                            </div>
+                                            <div class="history-accordions__head">
+                                                <div class="history-accordions-h-wrap">
+                                                    <div class="hi-ac-h-number"># 169881-2019 </div>
+                                                    <div class="hi-ac-h-status hi-ac-h-status--rejected">Отклонен</div>
+                                                    <div class="hi-ac-h-arrow"><svg width="12" height="7" viewBox="0 0 12 7" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M0.5 0.5L5.99979 5.07167L11.5 0.5V1.92803L5.99979 6.5L0.5 1.92803L0.5 0.5Z"
+                                                                fill="#0C3362" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="history-accordions__info">
+                                                    <div class="history-accordions__info--hidden-title ">
+                                                        <div class="hi-ac-i-item">Дата выдачи</div>
+                                                        <div class="hi-ac-i-item">Сумма займа</div>
+                                                        <div class="hi-ac-i-item">Срок</div>
+                                                        <div class="hi-ac-i-item">Дата возврата</div>
+                                                        <div class="hi-ac-i-item">Оплачено</div>
+                                                    </div>
+                                                <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Дата выдачи:</span>
+                                                    <span class="bold">21.08.2019</span></div>
+                                                <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Сумма займа:</span>
+                                                    <span class="bold">500 грн.</span></div>
+                                                <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Оплачено: </span>
+                                                    <span class="bold">500 грн.</span></div>
+                                                <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Срок: </span>
+                                                    <span class="bold">3
+                                                        дня</span></div>
+                                                <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Фактический cрок:</span>
+                                                    <span class="bold">23 дня</span></div>
+                                                <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Дата возврата:</span>
+                                                    <span class="bold">08.09.2019</span></div>
+                                                <div class="hi-ac-i-item"><span class="hi-ac-i-hide-adaptive">Статус: </span>
+                                                    <span class="bold green">Закрыт</span></div>
+                                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>

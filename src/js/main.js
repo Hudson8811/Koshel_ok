@@ -16,3 +16,4 @@
 //= partials/profile.js
 //= partials/get-credit.js
 //= partials/my-cards.js
+//= partials/my-credit.js

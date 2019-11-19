@@ -323,8 +323,36 @@
         width: 630px;
         margin: 0 auto;
     }
+
     .input-row .input-block--series {
         flex: 0 0 240px;
         width: unset;
     }
+}
+
+
+@media screen and (max-width: 639px) {
+    .header-mobile-burger {
+        margin-left: 19px;
+    }
+
+    .header-mobile-menu {
+        box-sizing: border-box;
+        width: calc(100vw - 15px);
+        padding: 18px 20px 0 17px;
+
+        .header-mobile-s-p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 0;
+        }
+    }
+
+    .header-mobile-menu .header-mobile-s-p::after {
+        margin-right: 15px;
+        position: absolute;
+        right: 0;
+    }
+
 }

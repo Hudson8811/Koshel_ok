@@ -92,7 +92,9 @@ $(document).ready(function () {
                 step = parseInt($this.attr('data-step')) || 1,
                 before = $this.attr('data-before') || '',
                 after = $this.attr('data-after') || '',
-                days = $this.attr('data-days') || 'false';
+                days = $this.attr('data-days') || 'false',
+                ddt = $this.attr('data-display-type') || '',    //подходит только 'tooltip', иные игнорируются
+                handle = ($this.find('.ui-slider-handle').length > 0) ? ($this.find('.ui-slider-handle')) : undefined;
 
 
 
@@ -103,19 +105,28 @@ $(document).ready(function () {
                 max: max,
                 step: step,
                 slide: function (event, ui) {
-                    displayValue.html(before + ui.value + after + (days == 'true' ? funcDays(ui.value) : ''));
-                    if (displayExpDate != undefined) {
-                        displayExpDate.html('до ' + moment().add(ui.value, 'days').format('D MMMM'));
+                    if (ddt !== 'tooltip') {
+                        displayValue.html(before + ui.value + after + (days == 'true' ? funcDays(ui.value) : ''));
+                        if (displayExpDate != undefined) {
+                            displayExpDate.html('до ' + moment().add(ui.value, 'days').format('D MMMM'));
+                        }
+                    }
+                    else {
+                        handle.find('.ui-slider-handle-tooltip').text(before + ui.value + after);
                     }
                 }
             });
 
-            displayValue.html(before + $(this).slider("value") + after + (days == 'true' ? funcDays($(this).slider("value")) : ''));
-            if (displayExpDate != undefined) {
-                displayExpDate.html('до ' + moment().add($(this).slider("value"), 'days').format('D MMMM'));
+            if (ddt !== 'tooltip') {
+                displayValue.html(before + $(this).slider("value") + after + (days == 'true' ? funcDays($(this).slider("value")) : ''));
+                if (displayExpDate != undefined) {
+                    displayExpDate.html('до ' + moment().add($(this).slider("value"), 'days').format('D MMMM'));
+                }
             }
-        }
-        );
+            else {
+                handle.find('.ui-slider-handle-tooltip').text(before + $(this).slider("value") + after);
+            }
+        });
     }
     ready_gc = true;
     if ($('.achivement-indicator-container').length > 0) {

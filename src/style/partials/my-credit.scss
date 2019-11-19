@@ -1,0 +1,678 @@
+.my-credit-page {
+    padding-top: 65px;
+}
+
+.my-credits {
+    width: 665px;
+    margin-right: 95px;
+}
+
+.mc-tab-name {
+    text-transform: uppercase;
+    color: #3DA163;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 135%;
+}
+
+.mc-credit {
+    margin-top: 33px;
+    margin-bottom: 50px;
+
+    &--expired {
+        .mc-credit-header {
+            background: #EB5757;
+        }
+
+        .mc-credit-info__for-close span {
+            color: #eb5757;
+        }
+
+        .ui-slider-handle-tooltip {
+            background: #EB5757;
+
+            &::after {
+                border-color: #EB5757 transparent transparent transparent;
+
+            }
+        }
+
+        .gc-slider__slider-range.ui-slider .ui-slider-range {
+            border-radius: 7px;
+            background: linear-gradient(90deg, #EB5757 calc(100% - 75px), #D23D3D 100%);
+        }
+
+        .gc-slider__slider-range .ui-state-default,
+        .gc-slider__slider-range .ui-widget-content .ui-state-default {
+            border: 2px solid #FB6868;
+            background: #EB5757;
+
+
+        }
+
+        .mc-ci-parameters span,
+        .mc-credit-bottom span {
+            color: #eb5757;
+        }
+
+        .mc-credit-bottom .btn {
+            background: #EB5757;
+        }
+    }
+
+
+}
+
+.mc-credit-header {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 16px 32px 13px;
+    color: #FFFFFF;
+    border-radius: 2px 2px 0px 0px;
+    background: #3DA163;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 135%;
+
+    &__number {
+        padding-right: 15px;
+    }
+
+    &__status {}
+}
+
+.mc-credit-info {
+    box-sizing: border-box;
+    padding: 33px 31px 39px;
+    border: 1px solid #E3E4EB;
+    border-top: none;
+    border-radius: 2px;
+
+    &__for-close {
+        color: #000000;
+        border-radius: 2px;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 135%;
+        font-style: normal;
+
+        span {
+            color: #3DA163;
+            font-weight: 600;
+        }
+    }
+
+    &__slider {
+        margin-top: 58px;
+
+
+    }
+
+
+
+
+}
+
+.ui-slider-handle-tooltip {
+    position: absolute;
+    z-index: 1;
+    top: -11px;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-width: 74px;
+    padding: 4px 10px;
+    transform: translate(-50%, -100%);
+    white-space: nowrap;
+    color: #FFFFFF;
+    border-radius: 1px;
+    background: #3DA163;
+    font-size: 13px;
+    line-height: 135%;
+
+    &::after {
+        position: absolute;
+        z-index: -1;
+        bottom: -15px;
+        left: 50%;
+        display: block;
+        width: 0;
+        height: 0;
+        content: '';
+        transform: translateX(-50%);
+        border-width: 10px;
+        border-style: solid;
+        border-color: #3DA163 transparent transparent transparent;
+    }
+}
+
+.mcis-edges {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 17px;
+    color: #94959A;
+    font-size: 13px;
+    line-height: 135%;
+
+    &__min {
+        margin-right: 10px;
+    }
+
+    &__max {}
+}
+
+.mc-ci-parameters {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 36px;
+    padding: 24px 48px 26px;
+    color: #000000;
+    background: #F1F2F7;
+    font-size: 15px;
+    line-height: 135%;
+
+    &__item {
+        padding: 0 5px;
+    }
+
+    span {
+        color: #3DA163;
+        font-weight: 600;
+    }
+}
+
+.mc-credit-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 32px;
+
+    &__summ {
+        display: flex;
+        align-items: center;
+        margin-right: 26px;
+        color: #000000;
+        font-size: 20px;
+        line-height: 135%;
+
+    }
+
+    span {
+        margin-left: 4px;
+        color: #3DA163;
+        font-weight: 600;
+    }
+
+    .btn {
+        padding: 0 32px;
+        font-weight: 500;
+    }
+}
+
+
+.mc-non-credit {}
+
+.mc-non-credit-message {
+    box-sizing: border-box;
+    width: calc(100% - 78px);
+    padding: 25px 35px 25px 24px;
+    background: #FFFCE1;
+
+
+
+    &__title {
+        color: #000000;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 135%;
+    }
+
+    &__info {
+        margin-top: 10px;
+        color: #000000;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 150%;
+        font-style: normal;
+    }
+
+    &__available {
+        margin-top: 20px;
+        color: #000000;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 135%;
+        font-style: normal;
+
+        span {
+            color: #3DA163;
+            font-weight: 500;
+        }
+    }
+}
+
+.mc-non-credit-btn {
+    width: 128px;
+    margin-top: 40px;
+    padding: 0px 32px;
+}
+
+
+
+
+
+
+
+
+.my-credit-history {
+    flex-grow: 1;
+
+    .mc-tab-name {}
+}
+
+.history-accordions {
+    margin-top: 33px;
+    background: #E3E4EB;
+
+    &-h-wrap {
+        width: 100%;
+        display: flex !important;
+        align-items: center;
+    }
+
+    &__head {
+        display: flex !important;
+        align-items: center;
+        box-sizing: border-box;
+        height: 56px;
+        padding: 10px 21px 10px 33px !important;
+        border: 0;
+        border-radius: 0;
+        background: #F1F2F7;
+
+        &,
+        >* {
+            transition: transform .2s, color .2s, background-color .2s;
+        }
+
+        &:not(:first-child) {
+            margin-top: 1px;
+        }
+
+        &.ui-state-active {
+            background: #3DA163;
+
+            .hi-ac-h-number,
+            .hi-ac-h-status {
+                color: #ffffff;
+            }
+
+            .hi-ac-h-arrow {
+                transform: rotate(180deg);
+
+                path {
+                    fill: #FFFFFF;
+                }
+            }
+        }
+
+        .ui-accordion-header-icon {
+            display: none;
+        }
+    }
+}
+
+.hi-ac-h-number {
+    flex-grow: 1;
+    color: #0C3362;
+    font-size: 15px;
+    line-height: 150%;
+}
+
+.hi-ac-h-status {
+    display: flex;
+    align-items: center;
+    width: 71px;
+    padding: 0 10px;
+    color: #3DA163;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 150%;
+
+    &--rejected {
+        color: #BABBC0;
+    }
+}
+
+
+.history-accordions__info {
+    padding: 25px 32px 28px !important;
+    border-bottom: 0;
+    border-radius: 0;
+
+    .bold {
+        font-weight: 600;
+    }
+
+    .green {
+        color: #3DA163;
+    }
+
+
+}
+
+.hi-ac-i-item {
+    color: #000000;
+    font-size: 13px;
+    line-height: 135%;
+
+    &:not(:last-child) {
+        padding-bottom: 13px;
+    }
+}
+
+.history-accordions__info--hidden-title {
+    display: none;
+}
+
+
+@media screen and (min-width:1501px) {
+    .mcp-adaptive-tab-controls {
+        display: none;
+    }
+}
+
+@media screen and (max-width:1500px) {
+    .mc-tab-name {
+        display: none;
+    }
+
+    .my-credits-page-tabs {
+        &>*:not(.active) {
+            display: none;
+        }
+    }
+
+    .mcp-adaptive-tab-controls {
+        display: flex;
+        align-items: center;
+        min-height: 27px;
+    }
+
+    .mcp-at-control {
+        width: 276px;
+        max-width: 50%;
+        cursor: pointer;
+        transition-duration: .2s;
+        text-transform: uppercase;
+        color: #94959A;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 135%;
+        font-style: normal;
+
+        &.active {
+            text-transform: uppercase;
+            pointer-events: none;
+            color: #3DA163;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 135%;
+            font-style: normal;
+        }
+    }
+
+    .my-credits {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .mcis-edges {
+        padding-right: 25px;
+    }
+
+    .mc-ci-parameters {
+        padding: 24px 60px 26px;
+    }
+
+    .history-accordions {
+        box-sizing: border-box;
+        border: 1px solid #E3E4EB;
+        border-radius: 2px;
+    }
+
+    .history-accordions__head {
+        height: unset;
+
+        &.ui-state-active {
+            margin-top: -1px !important;
+
+            .history-accordions-h-wrap {
+                height: 59px;
+                border-bottom: 0;
+            }
+        }
+    }
+
+    .history-accordions-h-wrap {
+        height: 56px;
+        margin: 0 32px;
+        border-bottom: 1px solid #E3E4EB;
+    }
+
+    .hi-ac-h-number {
+
+        &::before {
+            content: 'Договор ';
+        }
+    }
+
+    .hi-ac-h-arrow {}
+
+    .hi-ac-h-status {
+        width: 95px;
+    }
+
+    .history-accordions__head {
+        margin-top: 0 !important;
+        padding: 0 !important;
+        background: #ffffff;
+    }
+
+    .history-accordions__info {
+        border: 0;
+    }
+}
+
+
+
+@media screen and (max-width:1023px) {
+    .my-credit-page {
+        padding-top: 128px;
+    }
+
+    .mc-credit {
+        margin-top: 24px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .max-767 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1500px) and (min-width: 768px) {
+    .history-accordions__info--hidden-title {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .hi-ac-i-hide-adaptive {
+        display: none;
+    }
+
+    .history-accordions__info {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 !important;
+        background: #F1F2F7;
+
+        .history-accordions__info--hidden-title {
+            background: #ffffff;
+        }
+
+        &:not(.history-accordions__info--hidden-title) {
+            .hi-ac-i-item {
+                &:nth-child(2) {
+                    order: 1;
+                }
+
+                &:nth-child(3) {
+                    order: 2;
+                }
+
+                &:nth-child(4) {
+                    order: 5;
+                }
+
+                &:nth-child(5) {
+                    order: 3;
+                }
+
+                &:nth-child(6) {
+                    display: none;
+                }
+
+                &:nth-child(7) {
+                    order: 4;
+                }
+
+                &:nth-child(8) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+
+}
+
+@media screen and (max-width:767px) {
+    .mcis-edges {
+        padding-right: 0;
+    }
+
+    .mc-ci-parameters {
+        margin-top: 29px;
+        padding: 24px 59px 26px 57px;
+
+        span {
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .my-credit-page {
+        padding-top: 106px;
+
+        .container {
+            max-width: calc(100% - 15px * 2);
+        }
+    }
+
+    .mcp-adaptive-tab-controls {
+        display: block;
+    }
+
+    .mcp-at-control {
+        width: 100%;
+        max-width: 100%;
+        min-height: 27px;
+
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+
+    .mc-credit {
+        margin-top: 20px;
+    }
+
+    .mc-credit-header {
+        padding: 16px 16px 13px 19px;
+    }
+
+    .mc-credit-header__number {
+        span {
+            display: none;
+        }
+    }
+
+    .mc-credit-info {
+        padding: 33px 29px 39px;
+    }
+
+    .mc-ci-parameters {
+        margin-top: 28px;
+        padding: 25px 10px 29px 10px;
+    }
+
+    .mc-ci-parameters__item {
+        font-size: 13px;
+        line-height: 135%;
+
+        span {
+            margin-top: 3px;
+            font-size: 14.5px;
+        }
+    }
+
+    .mc-credit-bottom {
+        display: block;
+        margin-top: 45px;
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 180px;
+            margin-top: 19px;
+            padding: 0;
+        }
+    }
+
+    .mc-non-credit-message {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .mc-ci-parameters {
+        flex-wrap: wrap;
+    }
+
+    .mc-ci-parameters__item {
+        width: calc(50% - 10px);
+
+        &:not(:nth-last-child(1)):not(:nth-last-child(2)) {
+            margin-bottom: 10px;
+        }
+    }
+
+    .mc-credit-bottom {
+        margin-top: 17px;
+    }
+
+    .mc-credit-info {
+        padding: 18px 15px 18px;
+    }
+
+}

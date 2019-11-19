@@ -5653,7 +5653,7 @@ this._delay(function(){n===this.counter&&this.refreshPositions(!s)})},_clear:fun
             } else if (hour < 10) {
                 return 'সকাল';
             } else if (hour < 17) {
-                return '��ুপুর';
+                return 'দুপুর';
             } else if (hour < 20) {
                 return 'বিকাল';
             } else {
@@ -14929,6 +14929,8 @@ $(document).ready(function () {
 
             if (window.innerWidth <= 1500) {
                 if ($(this).parent().is(':visible')) {
+
+                    $(this).parent().siblings(".mpic-top").toggleClass('menu-open');
                     $(this).parent().stop().slideToggle(200);
                 }
             }
@@ -14941,7 +14943,7 @@ $(document).ready(function () {
 
     var picFix = $('#pic-fix');
     $(window).scroll(function () {
-        if (window.innerWidth <= 1500) {
+        if (window.innerWidth <= 1500 && window.innerWidth>1023) {
             if ($(window).scrollTop() > 63) {
                 picFix.siblings('.form-col').css("margin-top", picFix.height() + "px");
                 picFix.addClass('fixed');
@@ -15055,7 +15057,9 @@ $(document).ready(function () {
                 step = parseInt($this.attr('data-step')) || 1,
                 before = $this.attr('data-before') || '',
                 after = $this.attr('data-after') || '',
-                days = $this.attr('data-days') || 'false';
+                days = $this.attr('data-days') || 'false',
+                ddt = $this.attr('data-display-type') || '',    //подходит только 'tooltip', иные игнорируются
+                handle = ($this.find('.ui-slider-handle').length > 0) ? ($this.find('.ui-slider-handle')) : undefined;
 
 
 
@@ -15066,19 +15070,28 @@ $(document).ready(function () {
                 max: max,
                 step: step,
                 slide: function (event, ui) {
-                    displayValue.html(before + ui.value + after + (days == 'true' ? funcDays(ui.value) : ''));
-                    if (displayExpDate != undefined) {
-                        displayExpDate.html('до ' + moment().add(ui.value, 'days').format('D MMMM'));
+                    if (ddt !== 'tooltip') {
+                        displayValue.html(before + ui.value + after + (days == 'true' ? funcDays(ui.value) : ''));
+                        if (displayExpDate != undefined) {
+                            displayExpDate.html('до ' + moment().add(ui.value, 'days').format('D MMMM'));
+                        }
+                    }
+                    else {
+                        handle.find('.ui-slider-handle-tooltip').text(before + ui.value + after);
                     }
                 }
             });
 
-            displayValue.html(before + $(this).slider("value") + after + (days == 'true' ? funcDays($(this).slider("value")) : ''));
-            if (displayExpDate != undefined) {
-                displayExpDate.html('до ' + moment().add($(this).slider("value"), 'days').format('D MMMM'));
+            if (ddt !== 'tooltip') {
+                displayValue.html(before + $(this).slider("value") + after + (days == 'true' ? funcDays($(this).slider("value")) : ''));
+                if (displayExpDate != undefined) {
+                    displayExpDate.html('до ' + moment().add($(this).slider("value"), 'days').format('D MMMM'));
+                }
             }
-        }
-        );
+            else {
+                handle.find('.ui-slider-handle-tooltip').text(before + $(this).slider("value") + after);
+            }
+        });
     }
     ready_gc = true;
     if ($('.achivement-indicator-container').length > 0) {
@@ -15163,4 +15176,26 @@ $(document).ready(function () {
     }
 
     zindexCard($('.my-cards-page .card-item:not(.add-class):first-child'));
+});
+
+$(document).ready(function () {
+    if ($('.history-accordions .history-accordions__head').length > 0) {
+        $(".history-accordions").accordion({
+            header: '.history-accordions__head',
+            animate: 200,
+            cons: { "header": false },
+            heightStyle: "content"
+        });
+    }
+
+
+    if ($('.mcp-at-control').length > 0) {
+        $(".mcp-at-control").click(function () {
+            var $this=$(this);
+            $this.addClass('active').siblings().removeClass('active');
+            $('#'+$this.attr('data-tab-id')).addClass('active').siblings().removeClass('active');
+        });
+    }
+
+
 });

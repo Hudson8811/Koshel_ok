@@ -225,6 +225,7 @@
 .input-container {
   flex: 1 0 150px;
   margin-right: 30px;
+  max-width: calc(100% - 30px);
 
   .input-block-title {
     margin-top: 25px;
@@ -604,10 +605,10 @@
 
   .mobile-profile-info-col {
     position: fixed;
+    z-index: 1001;
     top: 0;
     right: 0;
     display: block;
-    z-index: 1001;
   }
 
   .mpic-top {
@@ -617,8 +618,8 @@
     width: 155px;
     height: 64px;
     padding-left: 14px;
-    background: #0C3362;
     cursor: pointer;
+    background: #0C3362;
 
     .mpic-arrow {
       margin-right: 16px;
@@ -657,22 +658,21 @@
   }
 
   .mpic-bottom {
-    display: none;
-    box-sizing: border-box;
     position: absolute;
     top: 100%;
     right: 0;
+    display: none;
+    box-sizing: border-box;
     width: 380px;
     padding: 31px 89px 8px 18px;
     background: #F1F2F7;
 
 
     .profile-complete {
-
-      line-height: 48px;
       padding: 0;
-      border-bottom: 1px solid #E3E4EB;
       padding-bottom: 28px;
+      border-bottom: 1px solid #E3E4EB;
+      line-height: 48px;
     }
 
 
@@ -718,6 +718,7 @@
   }
 
   .mpic-b-change-pass-ref {
+    position: relative;
     display: flex;
     align-items: center;
     transition: opacity .2s;
@@ -725,7 +726,6 @@
     font-weight: 500;
     font-size: 15px;
     line-height: 49px;
-    position: relative;
 
     &::after {
       position: absolute;
@@ -744,5 +744,257 @@
     &:hover {
       opacity: .8;
     }
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .change-pass-popup__inputs {
+    width: 510px;
+    padding-right: 130px;
+  }
+
+  .section-title {
+    margin-bottom: 26px;
+  }
+
+  .form-style .form-section+.form-section {
+    margin-top: 56px;
+  }
+
+  .radio-toggle {
+    margin-bottom: 33px;
+    padding-top: 0px;
+  }
+
+  .input-row .input-block--series {
+    flex: 1 0 0px;
+    width: unset;
+  }
+
+  .input-row .input-block--number {
+    flex: 1 0 179px;
+  }
+
+  #form-section-4 {
+    .section-title {
+      margin-bottom: 32px;
+    }
+  }
+
+  .crz-label {
+    margin-top: 32px;
+  }
+
+  .contact-num-label {
+    margin-top: 32px;
+  }
+
+  .checkbox-block {
+    margin-top: 31px;
+
+    &+.checkbox-block {
+      margin-top: 26px;
+    }
+  }
+
+  .checkbox-block .checkbox span {
+    line-height: 1.3;
+  }
+
+  .submit-block {
+    margin-top: 61px;
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .mpic-top {
+    width: 97px;
+
+    .mpic-arrow {
+      margin-right: 9px;
+    }
+  }
+
+  .mpic-bottom {
+    padding: 31px 15px 8px;
+    width: calc(100vw - 15px);
+    box-sizing: border-box;
+
+    .profile-complete,
+    .mpic-b-change-pass-ref {
+
+      width: 271px;
+      max-width: 100%;
+    }
+
+  }
+
+  .change-pass-popup__inputs {
+    width: 285px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 32px 10px 32px;
+  }
+
+  .change-pass-popup {
+
+    width: 345px;
+    max-width: 100%;
+  }
+
+  .change-pass-popup__title {
+    padding: 23px 30px;
+
+  }
+
+
+  .info-block {
+    width: calc(100% + 7.82vw * 2);
+    margin-left: -7.82vw;
+    padding-bottom: 18px;
+
+    .text {
+      line-height: 1.4;
+    }
+  }
+
+  .form-col form {
+    margin-top: 24px;
+  }
+
+  .form-style .form-section+.form-section {
+    margin-top: 50px;
+  }
+
+  .radio-toggle {
+    position: relative;
+    display: block;
+    margin-bottom: 29px;
+
+    padding-right: 90px;
+
+    .toggle-label {
+      display: block;
+
+      &:not(:last-child) {
+        margin-top: -2px;
+        margin-bottom: 11px;
+      }
+    }
+
+    .toggle-block {
+      top: calc(50% + 10px);
+      right: 27px;
+      width: 48px;
+      min-width: 48px;
+      height: 24px;
+      min-height: 24px;
+      transform: rotate(90deg) translateX(-50%);
+      position: absolute;
+    }
+  }
+
+  .input-row .input-block--series {
+
+    flex: 1 0 60%;
+  }
+
+  .passport-photo-row {
+    margin-bottom: 29px;
+  }
+
+  .photo-display {
+    width: 149px;
+    height: 128px;
+  }
+
+  .passport-photo-row>div:not(.input-block-title) {
+    display: block;
+
+    span {
+      margin-left: 0;
+      display: block;
+      padding-top: 15px;
+      width: 100%;
+      max-width: 100%;
+
+    }
+  }
+
+  #form-section-3 {
+
+    margin-top: 24px;
+  }
+
+  #form-section-4 {
+    .section-title {
+      margin-bottom: 24px;
+
+    }
+  }
+
+  .input-row--two-items-on-mobile {
+    margin-left: -15px;
+    margin-top: -24px !important;
+
+    .input-block {
+      flex-basis: unset;
+      width: 100%;
+      max-width: calc(50% - 15px);
+      margin-left: 15px;
+    }
+  }
+
+  .checkbox-block {
+    margin-top: 35px;
+
+    .checkbox span {
+      line-height: 1.1;
+      padding-top: 0px;
+    }
+  }
+
+  #form-section-5 {
+    margin-top: 43px;
+
+    .input-row:nth-child(4),
+    .input-row:nth-child(5) {
+      margin-top: 8px;
+    }
+  }
+
+  #form-section-6 {
+
+    margin-top: 57px;
+  }
+
+  .submit-block {
+    margin-top: 70px;
+    display: block;
+  }
+
+  .btn-submit-prof {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .submit-block.incorrect .submit-block__log {
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .profile-page {
+    padding-bottom: 18px;
+  }
+}
+
+@media screen and (max-width: 385px) {
+  .info-block {
+    width: 100%;
+    margin-left: 0;
+    padding-bottom: 18px;
   }
 }

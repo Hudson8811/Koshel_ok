@@ -63,6 +63,8 @@ $(document).ready(function () {
 
             if (window.innerWidth <= 1500) {
                 if ($(this).parent().is(':visible')) {
+
+                    $(this).parent().siblings(".mpic-top").toggleClass('menu-open');
                     $(this).parent().stop().slideToggle(200);
                 }
             }
@@ -75,7 +77,7 @@ $(document).ready(function () {
 
     var picFix = $('#pic-fix');
     $(window).scroll(function () {
-        if (window.innerWidth <= 1500) {
+        if (window.innerWidth <= 1500 && window.innerWidth>1023) {
             if ($(window).scrollTop() > 63) {
                 picFix.siblings('.form-col').css("margin-top", picFix.height() + "px");
                 picFix.addClass('fixed');
