@@ -14962,6 +14962,35 @@ $(document).ready(function () {
             }
         }
     });
+
+
+    $('#submit-profile').click(function () {
+        var form = $(this).parents('form');
+        var count  = form.find('input:invalid').length;
+        if (count > 0){
+            form.find('input:invalid').parents('.input-block').addClass('input-block--error-empty').parents('.form-section').find('.section-title').addClass('incorrect');
+            form.find('.submit-block__log').html('Проверьте правильность заполнения всех полей. Ошибок обнаружено: '+count);
+            form.find('.submit-block').addClass('incorrect');
+        }
+    });
+    $(".input-block input, .checkbox-block input").bind("propertychange change click keyup input paste blur", function(event) {
+        $(this).parents('.input-block').removeClass('input-block--error-empty')
+            .find('input:invalid').parents('.input-block').addClass('input-block--error-empty');
+        var form = $(this).parents('form');
+        var section = $(this).parents('.form-section');
+        var count  = form.find('input:invalid').length;
+        var countLocal  = section.find('input:invalid').length;
+        if (count > 0){
+            form.find('.submit-block__log').html('Проверьте правильность заполнения всех полей. Ошибок обнаружено: '+count);
+        } else {
+            form.find('.submit-block').removeClass('incorrect');
+        }
+        if (countLocal > 0){
+            section.find('.section-title').addClass('incorrect');
+        } else {
+            section.find('.section-title').removeClass('incorrect');
+        }
+    });
 });
 
 moment.locale('ru');
@@ -15149,6 +15178,13 @@ $(document).ready(function () {
         zindexCard(parent);
     }
 
+    $('.my-cards-page .card-item input[type=radio]').change(function() {
+        $('.my-cards-page .card').removeClass('active');
+        var parent = $(this).parents('.card-item');
+        parent.find('.card').addClass('active');
+        zindexCard(parent);
+    });
+
     $('#cart-modal .banks-grid .item').click(function () {
         $(this).addClass('active').siblings().removeClass('active');
     });
@@ -15175,7 +15211,51 @@ $(document).ready(function () {
         });
     }
 
+    var active768 = 1,
+        count768 = $('.my-cards-page .card-item:not(.add-card)').length;
+
+    function slider768(card) {
+        $('.my-cards-page .card-item:not(.add-card)').addClass('hidden');
+        card.show().addClass('left');
+
+        if (count768 > 2){
+            card.next().show().addClass('right-notlast').removeClass('hidden');
+            $('.next-cards').addClass('active');
+        } else {
+            card.next().show().addClass('right').removeClass('hidden');
+        }
+    }
+
+    $('.next-cards').click(function () {
+        active768++;
+        $('.my-cards-page .card-item:not(.add-card)').addClass('hidden').removeClass('left-notfirst left right right-notlast');
+        $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').show().addClass('left-notfirs').removeClass('hidden');
+        $('.prev-cards').addClass('active');
+        if (active768 === count768 - 1){
+            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').next().show().addClass('right').removeClass('hidden');
+            $('.next-cards').removeClass('active');
+        } else {
+            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').next().show().addClass('right-notlast').removeClass('hidden');
+        }
+    });
+
+    $('.prev-cards').click(function () {
+        active768--;
+        $('.my-cards-page .card-item:not(.add-card)').addClass('hidden').removeClass('left-notfirst left right right-notlast');
+        $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').next().show().addClass('right-notlast').removeClass('hidden');
+        $('.next-cards').addClass('active');
+
+        if (active768 === 1){
+            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').show().addClass('left').removeClass('hidden');
+            $('.prev-cards').removeClass('active');
+        } else {
+            $('.my-cards-page .card-item:not(.add-card):nth-child('+active768+')').show().addClass('left-notfirs').removeClass('hidden');
+        }
+    });
+
+
     zindexCard($('.my-cards-page .card-item:not(.add-class):first-child'));
+    slider768($('.my-cards-page .card-item:not(.add-class):first-child'));
 });
 
 $(document).ready(function () {

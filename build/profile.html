@@ -146,13 +146,13 @@
                     </div>
                     <form action="/" class="form-style">
                         <div class="form-section" id="form-section-1">
-                            <div class="section-title incorrect">Личные данные</div>
+                            <div class="section-title">Личные данные</div>
                             <div class="input-row">
                                 <div class="input-block  input-block_with-label"><input type="text" name=""
                                         required><span class="input-label">Фамилия</span>
                                     <div class="hit" title="Подсказка">?</div>
                                 </div>
-                                <div class="input-block  input-block_with-label input-block--error-empty"><input
+                                <div class="input-block  input-block_with-label"><input
                                         type="text" name="" required><span class="input-label">Имя</span>
                                     <div class="hit" title="Подсказка">?</div>
                                 </div>
@@ -401,17 +401,16 @@
                             </div>
                         </div>
                         <div class="form-section" id="form-section-last">
-                            <div class="checkbox-block"><label class="checkbox"><input type="checkbox" name="">
+                            <div class="checkbox-block"><label class="checkbox"><input type="checkbox" name="" required>
                                     <span>Я
                                         соглашаюсь с правилами предоставления займов</span></label></div>
-                            <div class="checkbox-block"><label class="checkbox"><input type="checkbox" name="">
+                            <div class="checkbox-block"><label class="checkbox"><input type="checkbox" name="" required>
                                     <span>Даю
                                         согласие на передачу и обработку моих данных телекоммуникационными
                                         операторами</span></label></div>
-                            <div class="submit-block incorrect">
-                                <button type="submit" class="btn btn-submit-prof hovco">Сохранить данные</button>
-                                <div class="submit-block__log">Проверьте правильность заполнения всех полей. Ошибок
-                                    обнаружено: 4</div>
+                            <div class="submit-block ">
+                                <button type="submit" class="btn btn-submit-prof hovco" id="submit-profile">Сохранить данные</button>
+                                <div class="submit-block__log"></div>
                             </div>
                         </div>
                     </form>
