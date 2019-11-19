@@ -14960,6 +14960,35 @@ $(document).ready(function () {
             }
         }
     });
+
+
+    $('#submit-profile').click(function () {
+        var form = $(this).parents('form');
+        var count  = form.find('input:invalid').length;
+        if (count > 0){
+            form.find('input:invalid').parents('.input-block').addClass('input-block--error-empty').parents('.form-section').find('.section-title').addClass('incorrect');
+            form.find('.submit-block__log').html('Проверьте правильность заполнения всех полей. Ошибок обнаружено: '+count);
+            form.find('.submit-block').addClass('incorrect');
+        }
+    });
+    $(".input-block input, .checkbox-block input").bind("propertychange change click keyup input paste blur", function(event) {
+        $(this).parents('.input-block').removeClass('input-block--error-empty')
+            .find('input:invalid').parents('.input-block').addClass('input-block--error-empty');
+        var form = $(this).parents('form');
+        var section = $(this).parents('.form-section');
+        var count  = form.find('input:invalid').length;
+        var countLocal  = section.find('input:invalid').length;
+        if (count > 0){
+            form.find('.submit-block__log').html('Проверьте правильность заполнения всех полей. Ошибок обнаружено: '+count);
+        } else {
+            form.find('.submit-block').removeClass('incorrect');
+        }
+        if (countLocal > 0){
+            section.find('.section-title').addClass('incorrect');
+        } else {
+            section.find('.section-title').removeClass('incorrect');
+        }
+    });
 });
 
 moment.locale('ru');
