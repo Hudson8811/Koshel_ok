@@ -352,6 +352,7 @@
     padding: 25px 32px 28px !important;
     border-bottom: 0;
     border-radius: 0;
+    background: #F1F2F7;
 
     .bold {
         font-weight: 600;
@@ -368,7 +369,6 @@
     color: #000000;
     font-size: 13px;
     line-height: 135%;
-
     &:not(:last-child) {
         padding-bottom: 13px;
     }
@@ -383,6 +383,7 @@
     .mcp-adaptive-tab-controls {
         display: none;
     }
+
 }
 
 @media screen and (max-width:1500px) {
@@ -508,17 +509,36 @@
 @media screen and (max-width: 1500px) and (min-width: 768px) {
     .history-accordions__info--hidden-title {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         width: 100%;
     }
 
-    .hi-ac-i-hide-adaptive {
-        display: none;
+
+    .hi-ac-i-item{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        flex-grow: 1;
+        &:not(:last-child) {
+            padding-bottom: 0;
+        }
     }
+
+    .hi-ac-i-hide-adaptive{
+        padding: 20px 5px;
+        background: #ffffff;
+    }
+
+    .history-accordions__info .bold{
+        padding: 20px 5px;
+    }
+
+
+
 
     .history-accordions__info {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
         padding: 0 !important;
         background: #F1F2F7;
@@ -558,6 +578,10 @@
                 }
             }
         }
+
+        &.ui-accordion-content-active{
+            border-bottom: 3px solid #E3E4EB;;
+        }
     }
 
 
@@ -576,9 +600,21 @@
             display: block;
         }
     }
+
+    .history-accordions__info {
+        &.ui-accordion-content-active{
+            border-bottom: 3px solid #E3E4EB;;
+        }
+    }
 }
 
 @media screen and (max-width: 639px) {
+    .hi-ac-h-number::before{
+        display: none;
+    }
+    .hi-ac-h-status {
+        width: 60px;
+    }
     .my-credit-page {
         padding-top: 106px;
 

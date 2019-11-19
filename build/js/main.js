@@ -10242,7 +10242,7 @@ this._delay(function(){n===this.counter&&this.refreshPositions(!s)})},_clear:fun
             future : 'ອີກ %s',
             past : '%sຜ່ານມາ',
             s : 'ບໍ່ເທົ່າໃດວິນາທີ',
-            ss : '%d ວິນາທີ' ,
+            ss : '%d ວິນ��ທີ' ,
             m : '1 ນາທີ',
             mm : '%d ນາທີ',
             h : '1 ຊົ່ວໂມງ',
@@ -13388,7 +13388,7 @@ this._delay(function(){n===this.counter&&this.refreshPositions(!s)})},_clear:fun
     };
 
     hooks.defineLocale('tg', {
-        months : 'январ_феврал_март_апрел_май_июн_июл_август_сентябр_октябр_ноябр_декабр'.split('_'),
+        months : 'январ_феврал_март_апрел_май_ию��_июл_август_сентябр_октябр_ноябр_декабр'.split('_'),
         monthsShort : 'янв_фев_мар_апр_май_июн_июл_авг_сен_окт_ноя_дек'.split('_'),
         weekdays : 'якшанбе_душанбе_сешанбе_чоршанбе_панҷшанбе_ҷумъа_шанбе'.split('_'),
         weekdaysShort : 'яшб_дшб_сшб_чшб_пшб_ҷум_шнб'.split('_'),
