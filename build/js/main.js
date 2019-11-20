@@ -14825,7 +14825,7 @@ this._delay(function(){n===this.counter&&this.refreshPositions(!s)})},_clear:fun
  *  jquery.ui.widget.js
  *  jquery.ui.mouse.js
  */
-!function(a){function f(a,b){if(!(a.originalEvent.touches.length>1)){a.preventDefault();var c=a.originalEvent.changedTouches[0],d=document.createEvent("MouseEvents");d.initMouseEvent(b,!0,!0,window,1,c.screenX,c.screenY,c.clientX,c.clientY,!1,!1,!1,!1,0,null),a.target.dispatchEvent(d)}}if(a.support.touch="ontouchend"in document,a.support.touch){var e,b=a.ui.mouse.prototype,c=b._mouseInit,d=b._mouseDestroy;b._touchStart=function(a){var b=this,c=a.originalEvent.target;return"DIV"==c.nodeName&&!c.classList.contains("ait-touch-handle")||"TEXTAREA"==c.nodeName||"INPUT"==c.nodeName||"BUTTON"==c.nodeName||"A"==c.nodeName||void(!e&&b._mouseCapture(a.originalEvent.changedTouches[0])&&(e=!0,b._touchMoved=!1,f(a,"mouseover"),f(a,"mousemove"),f(a,"mousedown")))},b._touchMove=function(a){e&&(this._touchMoved=!0,f(a,"mousemove"))},b._touchEnd=function(a){e&&(f(a,"mouseup"),f(a,"mouseout"),this._touchMoved||f(a,"click"),e=!1)},b._mouseInit=function(){var b=this;b.element.bind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),c.call(b)},b._mouseDestroy=function(){var b=this;b.element.unbind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),d.call(b)}}}(jQuery);
+!function(a){function f(a,b){if(!(a.originalEvent.touches.length>1)){a.preventDefault();var c=a.originalEvent.changedTouches[0],d=document.createEvent("MouseEvents");d.initMouseEvent(b,!0,!0,window,1,c.screenX,c.screenY,c.clientX,c.clientY,!1,!1,!1,!1,0,null),a.target.dispatchEvent(d)}}if(a.support.touch="ontouchend"in document,a.support.touch){var e,b=a.ui.mouse.prototype,c=b._mouseInit,d=b._mouseDestroy;b._touchStart=function(a){var b=this;!e&&b._mouseCapture(a.originalEvent.changedTouches[0])&&(e=!0,b._touchMoved=!1,f(a,"mouseover"),f(a,"mousemove"),f(a,"mousedown"))},b._touchMove=function(a){e&&(this._touchMoved=!0,f(a,"mousemove"))},b._touchEnd=function(a){e&&(f(a,"mouseup"),f(a,"mouseout"),this._touchMoved||f(a,"click"),e=!1)},b._mouseInit=function(){var b=this;b.element.bind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),c.call(b)},b._mouseDestroy=function(){var b=this;b.element.unbind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),d.call(b)}}}(jQuery);
 
 /* my scripts */
 
@@ -15026,7 +15026,7 @@ $(document).ready(function () {
             nextArrow: '<div class="my-achievements-slider-arrow mas-arrow-next"><svg width="13" height="25" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 24.5L9.90529 12.5005L-1.04907e-06 0.5L3.09406 0.5L13 12.5005L3.09406 24.5L0 24.5Z" fill="#BABBC0"/></svg></div>',
             responsive: [
                 {
-                    breakpoint: 1500,
+                    breakpoint: 1440,
                     settings: {
                         slidesToShow: 3,
                         slidesToScroll: 1,
@@ -15134,14 +15134,14 @@ $(document).ready(function () {
 
 adaptGC = function () {
     if (ready_gc) {
-        if (window.innerWidth > 1500 && radInAchivements[0].indOption.radius != 84) {
+        if (window.innerWidth > 1440 && radInAchivements[0].indOption.radius != 84) {
 
             radInAchivements.forEach(function (value, index) {
                 value.option('barWidth', 12);
                 value.option('radius', 84);
             });
         }
-        if (window.innerWidth <= 1500 && window.innerWidth > 639 && radInAchivements[0].indOption.radius != 52) {
+        if (window.innerWidth <= 1440 && window.innerWidth > 639 && radInAchivements[0].indOption.radius != 52) {
             /*console.log(radInAchivements[0].indOption.barWidth);
             console.log(radInAchivements[0].indOption.radius);*/
 
