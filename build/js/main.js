@@ -10729,7 +10729,7 @@ this._delay(function(){n===this.counter&&this.refreshPositions(!s)})},_clear:fun
             }
             if ((meridiem === 'രാത്രി' && hour >= 4) ||
                     meridiem === 'ഉച്ച കഴിഞ്ഞ്' ||
-                    meridiem === 'വൈകുന്നേരം') {
+                    meridiem === 'വൈകുന്നേര���') {
                 return hour + 12;
             } else {
                 return hour;
