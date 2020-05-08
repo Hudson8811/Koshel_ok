@@ -519,3 +519,18 @@ img {
 		padding: 0;
 	}
 }
+
+
+.input-block input:read-only~span{
+	padding-top: 9px!important;
+	font-size: 11px;
+}
+
+.input-block input:not(:required):not(:read-only)~span{
+	font-size: 15px;
+	padding-top: 18px !important;
+}
+.input-block input:not(:required):not(:read-only):focus~span, .input-block input.not-empty:not(:required):not(:read-only)~span{
+	font-size: 14px;
+	padding-top: 9px !important;
+}

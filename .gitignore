@@ -72,3 +72,6 @@ typings/
 .idea/smmagnat.iml
 .idea/vcs.xml
 .idea/webResources.xml
+
+.idea
+node_modules
