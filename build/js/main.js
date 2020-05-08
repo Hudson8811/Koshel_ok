@@ -9746,7 +9746,7 @@ this._delay(function(){n===this.counter&&this.refreshPositions(!s)})},_clear:fun
         monthsParseExact: true,
         weekdays : 'ಭಾನುವಾರ_ಸೋಮವಾರ_ಮಂಗಳವಾರ_ಬುಧವಾರ_ಗುರುವಾರ_ಶುಕ್ರವಾರ_ಶನಿವಾರ'.split('_'),
         weekdaysShort : 'ಭಾನು_ಸೋಮ_ಮಂಗಳ_ಬುಧ_ಗುರು_ಶುಕ್ರ_ಶನಿ'.split('_'),
-        weekdaysMin : 'ಭಾ_���ೋ_ಮಂ_ಬು_ಗು_ಶು_ಶ'.split('_'),
+        weekdaysMin : 'ಭಾ_ಸೋ_ಮಂ_ಬು_ಗು_ಶು_ಶ'.split('_'),
         longDateFormat : {
             LT : 'A h:mm',
             LTS : 'A h:mm:ss',
@@ -14989,6 +14989,15 @@ $(document).ready(function () {
             section.find('.section-title').addClass('incorrect');
         } else {
             section.find('.section-title').removeClass('incorrect');
+        }
+    });
+
+    $(".input-block input").change(function () {
+        if ($(this).val() != "") {
+            $(this).addClass('not-empty');
+        }
+        else {
+            $(this).removeClass('not-empty');
         }
     });
 });
